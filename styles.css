@@ -30,7 +30,7 @@ body {
   height: 60px;
 }
 
-/* Hamburger */
+/* HAMBURGER (hidden by default) */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -38,7 +38,7 @@ body {
   cursor: pointer;
 }
 
-/* Desktop menu */
+/* NAV LINKS DEFAULT (DESKTOP) */
 .nav-links {
   list-style: none;
   display: flex;
@@ -85,7 +85,7 @@ body {
 /* ================= MOBILE ================= */
 @media (max-width: 767px) {
 
-  /* NAVBAR */
+  /* NAVBAR LAYOUT */
   .navbar {
     justify-content: center;
     padding: 15px;
@@ -100,7 +100,7 @@ body {
     height: 65px;
   }
 
-  /* Show hamburger */
+  /* SHOW HAMBURGER */
   .hamburger {
     display: block;
     position: absolute;
@@ -108,7 +108,7 @@ body {
     top: 18px;
   }
 
-  /* Hide menu by default */
+  /* HIDE DESKTOP MENU */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -120,6 +120,7 @@ body {
     padding: 15px 0;
   }
 
+  /* SHOW WHEN ACTIVE */
   .nav-links.active {
     display: flex;
   }
@@ -129,27 +130,12 @@ body {
     padding: 12px 0;
   }
 
-  /* HERO FIX */
+  /* HERO */
   .hero {
-    height: 60vh; /* keep slideshow stacked */
+    height: 60vh;
   }
 
   .hero-image {
-    object-fit: contain; /* show full image */
-    background: black;   /* fills empty space cleanly */
-  }
-}
-
-/* ================= TABLET ================= */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero {
-    height: 70vh;
-  }
-}
-
-/* ================= DESKTOP ================= */
-@media (min-width: 1024px) {
-  .hero {
-    height: 80vh;
+    object-fit: cover;   /* DO NOT use contain */
   }
 }
