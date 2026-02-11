@@ -66,13 +66,13 @@ body {
   background: #000;
 }
 
-/* PERFECT STACKING */
+/* DESKTOP SLIDER STACKING */
 .hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* fills screen */
+  object-fit: cover;
   object-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -129,7 +129,17 @@ body {
     padding: 12px 0;
   }
 
+  /* FIX HERO FOR MOBILE */
   .hero {
-    height: 70vh;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
