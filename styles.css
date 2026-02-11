@@ -68,10 +68,11 @@ body {
 
 .hero-image {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;      /* fills width */
   object-position: center center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -126,13 +127,12 @@ body {
     padding: 12px 0;
   }
 
-  /* MOBILE HERO FIX */
+  /* MOBILE HERO */
   .hero {
-    height: 90vh;            /* taller so less vertical crop */
+    height: 75vh;   /* slightly shorter on mobile */
   }
 
   .hero-image {
-    object-fit: cover;       /* fill width */
-    object-position: center;
+    object-fit: cover;   /* important: no contain */
   }
 }
