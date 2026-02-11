@@ -19,7 +19,6 @@ body {
   padding: 12px 30px;
   background: #d62828;
   width: 100%;
-  z-index: 1000; /* keeps nav above slideshow */
 }
 
 .nav-left {
@@ -65,7 +64,6 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
   overflow: hidden;
 }
 
@@ -81,6 +79,13 @@ body {
 
 .hero-image.active {
   opacity: 1;
+}
+
+/* DESKTOP HEIGHT */
+@media (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
 }
 
 /* ================= MOBILE ================= */
@@ -117,7 +122,6 @@ body {
     top: 100%;
     left: 0;
     padding: 15px 0;
-    z-index: 1001;
   }
 
   .nav-links.active {
@@ -129,13 +133,15 @@ body {
     padding: 12px 0;
   }
 
-  /* HERO FIX */
+  /* HERO FIX — DO NOT CROP */
   .hero {
-    height: 60vh; /* controlled height */
+    height: auto;
   }
 
   .hero-image {
-    object-fit: contain; /* SHOW FULL IMAGE */
-    background: black;   /* clean letterbox */
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
