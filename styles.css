@@ -1,4 +1,3 @@
-/* ================= GLOBAL SETTINGS ================= */
 * {
   margin: 0;
   padding: 0;
@@ -58,42 +57,31 @@ body {
   text-decoration: underline;
 }
 
-/* ================= HERO SLIDESHOW ================= */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh; /* Full screen height on desktop */
-  background: #000; /* Fixes flashing: black background shows during fades */
+  height: 80vh;
   overflow: hidden;
+  background: #000;
 }
 
-/* SLIDER IMAGES */
 .hero-image {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  
-  /* FIX: 'contain' shows the FULL image without cutting edges */
-  object-fit: contain; 
-  
-  /* Center the image within the black hero box */
-  object-position: center; 
-  
+  object-fit: cover;
+  object-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  
-  /* Prevents invisible images from blocking clicks */
-  visibility: hidden; 
 }
 
 .hero-image.active {
   opacity: 1;
-  visibility: visible;
 }
 
-/* ================= MOBILE STYLES (767px and below) ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 767px) {
 
   .navbar {
@@ -117,14 +105,13 @@ body {
     top: 18px;
   }
 
-  /* MOBILE MENU FIX: Specific 'top' height prevents it from appearing in middle */
   .nav-links {
     display: none;
     flex-direction: column;
     background: #d62828;
     width: 100%;
     position: absolute;
-    top: 100%; /* Sits exactly at the bottom of the red nav bar */
+    top: 100%;
     left: 0;
     padding: 15px 0;
     z-index: 2000;
@@ -137,18 +124,16 @@ body {
   .nav-links li {
     text-align: center;
     padding: 12px 0;
-    list-style: none;
   }
 
-  /* MOBILE HERO FIX */
+  /* 🔥 REAL FIX */
   .hero {
     height: auto;
-    aspect-ratio: 16 / 9; /* Maintains a TV-screen shape on mobile */
-    background: #000;
+    aspect-ratio: 4 / 3;   /* Adjust if needed */
+    overflow: hidden;
   }
 
   .hero-image {
-    height: 100%;
-    object-fit: contain; /* Double-ensures full image on small screens */
+    object-fit: contain;
   }
 }
