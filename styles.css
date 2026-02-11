@@ -64,19 +64,14 @@ body {
   overflow: hidden;
 }
 
-/* 🔥 THIS LINE PREVENTS PAGE JUMPING */
-.hero-image:not(.active) {
-  pointer-events: none;
-}
-
-/* FIXED SLIDESHOW STACKING */
+/* 🔥 KEEP THEM STACKED — DO NOT CHANGE SIZE */
 .hero-image {
-  position: absolute;
+  position: absolute;     /* must stay absolute */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;      /* untouched */
   object-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -84,7 +79,6 @@ body {
 
 .hero-image.active {
   opacity: 1;
-  z-index: 2;
 }
 
 /* ================= MOBILE ================= */
