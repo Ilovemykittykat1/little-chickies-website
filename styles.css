@@ -138,19 +138,3 @@ body {
   }
 }
 
-/* ================= TABLET ================= */
-@media (max-width: 1024px) and (min-width: 768px) {
-
-  .hero {
-    height: 70vh;   /* slightly shorter for tablet */
-  }
-
-  .hero-image {
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .nav-links {
-    gap: 15px;  /* slightly tighter spacing */
-  }
-}
