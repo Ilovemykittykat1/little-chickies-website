@@ -62,26 +62,25 @@ body {
   position: relative;
   width: 100%;
   height: 80vh;
-  overflow: hidden;
   background: #000;
+  overflow: hidden;
 }
 
-/* DESKTOP SLIDER STACKING */
+/* SLIDER IMAGES */
 .hero-image {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  z-index: 0;
 }
 
 .hero-image.active {
   opacity: 1;
-  z-index: 1;
 }
 
 /* ================= MOBILE ================= */
@@ -129,17 +128,15 @@ body {
     padding: 12px 0;
   }
 
-  /* FIX HERO FOR MOBILE */
+  /* MOBILE HERO FIX */
   .hero {
     height: auto;
-    min-height: auto;
-    overflow: visible;
+    aspect-ratio: 16 / 9;   /* controls shape instead of vh */
+    overflow: hidden;
   }
 
   .hero-image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: contain;    /* show full image */
   }
 }
