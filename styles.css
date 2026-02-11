@@ -61,27 +61,15 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
-  overflow: hidden;
+  min-height: 80vh;   /* changed from fixed height */
   background: #000;
 }
 
-/* PERFECT STACKING */
 .hero-image {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-  
-  object-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 0;
-}
-
-.hero-image.active {
-  opacity: 1;
-  z-index: 1;
+  height: auto;       /* important */
+  display: block;
+  object-fit: contain;
 }
 
 /* ================= MOBILE ================= */
@@ -130,6 +118,6 @@ body {
   }
 
   .hero {
-    height: 70vh;
+    min-height: auto;
   }
 }
