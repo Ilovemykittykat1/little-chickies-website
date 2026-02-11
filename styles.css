@@ -45,6 +45,10 @@ body {
   gap: 25px;
 }
 
+.nav-links li {
+  list-style: none;
+}
+
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -78,22 +82,18 @@ body {
   opacity: 1;
 }
 
-.hero-overlay {
-  display: none;
-}
-
 /* ================= MOBILE ================= */
 @media (max-width: 767px) {
 
-  /* Navbar layout */
+  /* NAVBAR */
   .navbar {
     justify-content: center;
     padding: 15px;
   }
 
   .nav-left {
-    justify-content: center;
     width: 100%;
+    justify-content: center;
   }
 
   .logo {
@@ -108,7 +108,7 @@ body {
     top: 18px;
   }
 
-  /* Hide menu initially */
+  /* Hide menu by default */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -126,20 +126,17 @@ body {
 
   .nav-links li {
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
-  /* ===== FIX IMAGE CROPPING ===== */
+  /* HERO FIX */
   .hero {
-    height: auto;
-    overflow: visible;
+    height: 60vh; /* keep slideshow stacked */
   }
 
   .hero-image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: contain;   /* THIS is the key */
+    object-fit: contain; /* show full image */
+    background: black;   /* fills empty space cleanly */
   }
 }
 
