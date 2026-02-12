@@ -150,3 +150,76 @@ body {
     display: block;
   }
 }
+
+
+
+
+
+
+
+
+
+/* ================= SPECIALS SECTION ================= */
+
+.specials {
+  position: relative;
+  display: flex;
+  justify-content: center;     
+  align-items: flex-start;
+  gap: 30px;                   
+  padding: 160px 4% 100px;     
+  width: 100%;
+}
+
+/* HEADING */
+.specials::before {
+  content: "OUR SPECIALS";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* CARD STYLE */
+.special-item {
+  flex: 0 0 440px;        /* fixed clean width */
+  overflow: hidden;
+  border: 5px solid #000;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+/* IMAGE */
+.special-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* MOBILE STACK */
+@media (max-width: 900px) {
+  .specials {
+    flex-direction: column;
+    gap: 30px;
+    padding: 140px 8% 100px;
+  }
+
+  .special-item {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
