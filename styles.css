@@ -189,13 +189,16 @@ body {
 
 /* CARD STYLE */
 .special-item {
-  flex: 0 0 440px;        /* fixed clean width */
-  overflow: hidden;
+  flex: 0 0 auto;          /* stop stretching */
+  max-width: 520px;
   border: 5px solid #000;
   border-radius: 16px;
   box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-  background: #fff;
+  overflow: hidden;
+  padding: 0;              /* just in case */
+  background: transparent; /* remove any background fill */
 }
+
 
 /* IMAGE */
 .special-item img {
@@ -209,17 +212,19 @@ body {
   overflow-x: hidden;
 }
 
-/* MOBILE STACK */
 @media (max-width: 900px) {
+
   .specials {
     flex-direction: column;
-    gap: 30px;
-    padding: 140px 8% 100px;
+    padding: 120px 8% 80px;
   }
 
   .special-item {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    aspect-ratio: auto;   /* 👈 REMOVE forced square */
+    height: auto;         /* 👈 let image define height */
+  }
+
+  .special-item img {
+    height: auto;
   }
 }
