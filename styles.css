@@ -8,6 +8,7 @@
 body {
   background: #ffffff;
   color: #000;
+  overflow-x: hidden;
 }
 
 /* ================= NAV BAR ================= */
@@ -62,11 +63,11 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 /* DESKTOP HERO */
 @media (min-width: 768px) {
-
   .hero {
     height: 80vh;
   }
@@ -88,9 +89,265 @@ body {
   }
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 767px) {
+/* ================= SPECIALS SECTION ================= */
+.specials-heading {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  text-shadow: 2px 2px 0 #000;
+  margin: 80px 0 50px 0;
+}
 
+.specials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 4% 0;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* card style */
+.special-item {
+  flex: 0 0 auto;
+  max-width: 520px;
+  border: 5px solid #000;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+  overflow: hidden;
+  background: transparent;
+}
+
+/* image */
+.special-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= PROMO BANNER ================= */
+.promo-banner {
+  width: 100%;
+  margin: 0 0 50px 0;
+  padding: 0 4%;
+}
+
+.promo-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ===== VIEW MENU BUTTON ===== */
+.view-menu-wrapper {
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+.view-menu-btn {
+  display: inline-block;
+  background: #d62828;
+  color: #ffffff;
+  padding: 18px 50px;
+  font-size: 22px;
+  font-weight: 900;
+  text-decoration: none;
+  border: 5px solid #ffcc00;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+}
+
+.view-menu-btn:hover {
+  background: #ffcc00;
+  color: #d62828;
+}
+
+/* ===== HOME CALL BANNER ===== */
+.home-call-banner-section {
+  width: 100%;
+  height: 400px;
+  margin: 0 0 50px 0;
+  overflow: hidden;
+  padding: 0 4%;
+}
+
+.home-call-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ===== PHONE NUMBER SECTION ===== */
+.number-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.call-img,
+.number-img {
+  max-width: 550px;
+  height: auto;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #d62828;
+  padding: 25px 4%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links i {
+  font-size: 20px;
+}
+
+.footer-copy {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================= ABOUT PAGE ================= */
+.about-banner-static {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.about-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.about-inline-banner {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 50px auto;
+  padding: 0 4%;
+  border-radius: 12px;
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials-section {
+  background: #ffffff;
+  padding: 50px 4%;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.testimonials-heading {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  margin-bottom: 50px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 40px 25px;
+  border-radius: 18px;
+  border: 5px solid #d62828;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(214, 40, 40, 0.25);
+}
+
+.testimonials-closing {
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 0 4%;
+  text-align: center;
+}
+
+.testimonials-closing p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 767px) {
+  /* NAVBAR MOBILE */
   .navbar {
     justify-content: center;
     padding: 15px;
@@ -133,7 +390,7 @@ body {
     padding: 12px 0;
   }
 
-  /* MOBILE HERO FIX */
+  /* HERO MOBILE */
   .hero {
     height: auto;
   }
@@ -149,73 +406,16 @@ body {
   .hero-image.active {
     display: block;
   }
-}
 
-@media (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 12px;
+  /* SPACING ADJUSTMENTS FOR MOBILE */
+  .specials-heading {
+    margin: 40px 0 30px 0;
   }
-}
-
-
-
-
-
-
-
-/* ================= SPECIALS SECTION ================= */
-
-.specials {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 80px 4% 100px;
-  width: 100%;
-}
-
-/* real heading */
-.specials-heading {
-  text-align: center;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #d62828;
-  text-shadow: 2px 2px 0 #000;
-  margin: 60px 0 40px 0;
-}
-
-/* card style */
-.special-item {
-  flex: 0 0 auto;
-  max-width: 520px;
-  border: 5px solid #000;
-  border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-  overflow: hidden;
-  background: transparent;
-}
-
-/* image */
-.special-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* remove horizontal scroll */
-body {
-  overflow-x: hidden;
-}
-
-/* mobile */
-@media (max-width: 900px) {
 
   .specials {
     flex-direction: column;
-    padding: 40px 8% 80px;
+    padding: 0 8% 0;
+    margin-bottom: 30px;
   }
 
   .special-item {
@@ -224,158 +424,30 @@ body {
     margin: 0 auto;
   }
 
-}
-
-
-/* ================= PROMO BANNER ================= */
-
-.promo-banner {
-  width: 100%;
-  margin: 40px 0;          /* space above and below banner */
-  padding: 0 4%;           /* slight side spacing */
-}
-
-.promo-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-
-.number-section {
-  display: flex;
-  justify-content: flex-end; 
-  padding-right: 200px; /* moves him to the right side */
-}
-
-.number-img {
-  width: 500px;
-  height: auto;
-}
-
-.number-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 40px 20px;
-  flex-wrap: wrap; /* makes it mobile friendly */
-}
-
-.call-img,
-.number-img {
-  max-width: 550px;
-  height: auto;
-}
-/* ================= FOOTER ================= */
-
-.footer {
-  background: #d62828;
-  padding: 25px 30px;
-  width: 100%;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;  /* allows wrapping on tablet */
-  justify-content: center;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-links i {
-  font-size: 20px;
-}
-
-.footer-copy {
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* MOBILE FOOTER */
-@media (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
-
-/* ================= ABOUT BANNER HEIGHT FIX ================= */
-
-.about-banner-static {
-  width: 100%;
-  height: 80vh;       /* same style feel as homepage */
-  overflow: hidden;
-  position: relative;
-}
-
-.about-banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* ================= FIX ABOUT TEXT LAYOUT ================= */
-
-.about-container {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.about-container p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 24px;
-  color: #000;
-}
-
-
-/* ================= ADDITIONAL RESPONSIVENESS FIXES ================= */
-
-/* ---- ABOUT BANNER MOBILE FIX ---- */
-@media (max-width: 768px) {
-  .about-banner-static {
-    height: 40vh;   /* shorter on phones */
+  .promo-banner {
+    margin: 0 0 30px 0;
   }
 
-  .about-banner-img {
-    height: 100%;
-    object-fit: cover;
+  .view-menu-wrapper {
+    margin: 0 0 30px 0;
   }
-}
 
-/* ---- HOME PAGE BOTTOM NUMBER SECTION MOBILE FIX ---- */
-@media (max-width: 768px) {
+  .home-call-banner-section {
+    height: auto;
+    margin: 0 0 30px 0;
+    padding: 0 3%;
+  }
+
+  .home-call-banner-img {
+    height: auto;
+    object-fit: contain;
+  }
 
   .number-section {
     flex-direction: column;
     padding: 30px 15px;
     gap: 15px;
+    margin-bottom: 20px;
   }
 
   .call-img,
@@ -383,169 +455,42 @@ body {
     width: 100%;
     max-width: 100%;
   }
-}
 
-/* ---- EXTRA SMALL PHONES ---- */
-@media (max-width: 480px) {
-
-  .about-banner-static {
-    height: 35vh;  /* even tighter on small phones */
+  /* FOOTER MOBILE */
+  .footer {
+    padding: 20px 3%;
   }
 
-  .about-container {
-    padding: 0 15px;
+  .footer-content {
+    gap: 10px;
   }
 
-  .about-container p {
-    font-size: 16px;
+  .footer-links {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-links i {
+    font-size: 18px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
   }
 }
 
-.home-call-banner-section {
-  width: 100%;
-  height: 400px;   /* keep your original height */
-  margin: 40px 0;
-  overflow: hidden;
-  padding: 0 4%;   /* matches top promo banner spacing */
-}
-.home-call-banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%; /* move image down slightly */
-  display: block;
-  border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-
-  .home-call-banner-section {
-    height: auto;          /* remove forced height on mobile */
-  }
-
-  .home-call-banner-img {
-    height: auto;          /* stop forcing it */
-    object-fit: contain;   /* prevent cropping */
-  }
-
-}
-
-/* ===== VIEW MENU BUTTON ===== */
-
-.view-menu-wrapper {
-  text-align: center;
-  margin: 40px 0 40px 0;
-}
-
-.view-menu-btn {
-  display: inline-block;
-  background: #d62828;     /* red */
-  color: #ffffff;          /* white text */
-  padding: 18px 50px;
-  font-size: 22px;
-  font-weight: 900;
-  text-decoration: none;
-  border: 5px solid #ffcc00;  /* yellow border */
-  border-radius: 10px;
-  letter-spacing: 2px;
-  transition: 0.3s ease;
-}
-
-.view-menu-btn:hover {
-  background: #ffcc00;     /* yellow */
-  color: #d62828;          /* red text */
-}
-
-
-@media (max-width: 768px) {
-
-  .specials {
-    padding: 30px 5% 40px;
-  }
-
-  .specials-heading {
-    margin: 30px 0 20px 0;
-  }
-
-  .promo-banner {
-    margin: 20px 0;
-  }
-
-  .home-call-banner-section {
-    margin: 20px 0;
-    padding: 0 3%;
-  }
-
-  .view-menu-wrapper {
-    margin: 20px 0;
-  }
-
-}
-
-
-/* ===== ABOUT INLINE IMAGE (BURGER) ===== */
-
-.about-inline-banner {
-  width: 90%;
-  max-width: 1200;
-  height: auto;
-  display: block;
-  margin: 40px auto;
-  border-radius: 12px;
-}
-
-/* ===== TESTIMONIALS SECTION ===== */
-
-.testimonials-section {
-  background: #ffffff;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.testimonials-heading {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #d62828;
-  margin-bottom: 70px;
-}
-
-/* GRID */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-/* CARD STYLE */
-.testimonial-card {
-  background: #ffffff;
-  padding: 40px 25px;
-  border-radius: 18px;
-  border: 5px solid #d62828;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.6;
-  transition: 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 45px rgba(214, 40, 40, 0.25);
-}
-
-/* TABLET */
+/* TABLET RESPONSIVENESS */
 @media (max-width: 992px) {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* MOBILE */
+/* SMALL MOBILE */
 @media (max-width: 600px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
@@ -556,16 +501,72 @@ body {
     padding: 30px 20px;
   }
 }
-.testimonials-closing {
-  max-width: 900px;
-  margin: 100px auto 60px;
-  padding: 0 20px;
-  text-align: center;
+
+@media (max-width: 480px) {
+  .about-banner-static {
+    height: 35vh;
+  }
+
+  .about-container {
+    margin: 30px auto;
+    padding: 0 8%;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+
+  .about-inline-banner {
+    margin: 30px auto;
+    padding: 0 8%;
+  }
+
+  .testimonials-section {
+    padding: 30px 8%;
+    margin: 30px 0;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 30px;
+  }
+
+  .testimonials-closing {
+    margin: 30px auto 0;
+    padding: 0 8%;
+  }
 }
 
-.testimonials-closing p {
-  font-size: 20px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-  color: #000;
+@media (max-width: 768px) {
+  .about-banner-static {
+    height: 40vh;
+  }
+
+  .about-banner-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-container {
+    margin: 30px auto;
+    padding: 0 8%;
+  }
+
+  .about-inline-banner {
+    margin: 30px auto;
+    padding: 0 8%;
+  }
+
+  .testimonials-section {
+    padding: 30px 8%;
+    margin: 30px 0;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 30px;
+  }
+
+  .testimonials-closing {
+    margin: 30px auto 0;
+    padding: 0 8%;
+  }
 }
