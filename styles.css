@@ -151,6 +151,12 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 
 
 
@@ -237,3 +243,160 @@ body {
 }
 
 
+.number-section {
+  display: flex;
+  justify-content: flex-end; 
+  padding-right: 200px; /* moves him to the right side */
+}
+
+.number-img {
+  width: 500px;
+  height: auto;
+}
+
+.number-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* makes it mobile friendly */
+}
+
+.call-img,
+.number-img {
+  max-width: 550px;
+  height: auto;
+}
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #d62828;
+  padding: 25px 30px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;  /* allows wrapping on tablet */
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links i {
+  font-size: 20px;
+}
+
+.footer-copy {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* MOBILE FOOTER */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ================= ABOUT BANNER HEIGHT FIX ================= */
+
+.about-banner-static {
+  width: 100%;
+  height: 80vh;       /* same style feel as homepage */
+  overflow: hidden;
+  position: relative;
+}
+
+.about-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ================= FIX ABOUT TEXT LAYOUT ================= */
+
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+
+/* ================= ADDITIONAL RESPONSIVENESS FIXES ================= */
+
+/* ---- ABOUT BANNER MOBILE FIX ---- */
+@media (max-width: 768px) {
+  .about-banner-static {
+    height: 40vh;   /* shorter on phones */
+  }
+
+  .about-banner-img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ---- HOME PAGE BOTTOM NUMBER SECTION MOBILE FIX ---- */
+@media (max-width: 768px) {
+
+  .number-section {
+    flex-direction: column;
+    padding: 30px 15px;
+    gap: 15px;
+  }
+
+  .call-img,
+  .number-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ---- EXTRA SMALL PHONES ---- */
+@media (max-width: 480px) {
+
+  .about-banner-static {
+    height: 35vh;  /* even tighter on small phones */
+  }
+
+  .about-container {
+    padding: 0 15px;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+}

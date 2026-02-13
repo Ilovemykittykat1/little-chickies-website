@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <title>Little Chickies | About Us</title>
+  <meta name="description" content="Learn more about Little Chickies, your local Cape Breton pizza and takeout restaurant serving fresh food with friendly service." />
+  <meta name="keywords" content="Little Chickies, Cape Breton pizza, local restaurant, takeout, family restaurant" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Little Chickies" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+  <nav class="navbar">
+
+    <div class="nav-left">
+      <img src="images/logo.png" alt="Little Chickies Pizza Logo" class="logo" />
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+
+    <!-- FULL WIDTH BANNER (MUST BE OUTSIDE about-container) -->
+    <div class="about-banner-static">
+      <img src="images/food.jpg" class="about-banner-img" alt="Little Chickies food display">
+    </div>
+
+    <!-- TEXT CONTAINER ONLY -->
+    <div class="about-container">
+
+      <p>
+        Little Chickies is proud to be a locally owned and operated restaurant serving the local Cape Breton community.
+        From day one, our goal has been simple: serve fresh, hot pizza and quality takeout food in a friendly, welcoming environment.
+      </p>
+
+      <p>
+        Being a small town restaurant means we are more than just a place to grab a meal.
+        We are part of the community. We see the same families each week, we know our regular customers by name,
+        and we take pride in being a dependable spot for lunch breaks, family dinners, and weekend takeout nights.
+      </p>
+
+      <p>
+        Our pizzas are made fresh with hand-prepared dough, carefully seasoned sauce, and generous toppings.
+        Whether you prefer a classic pepperoni, a loaded works pizza, or something simple and cheesy,
+        we focus on flavour, consistency, and quality every time.
+      </p>
+
+      <p>
+        In addition to pizza, we serve a variety of takeout favourites including donairs, burgers, garlic fingers,
+        wings, and other comfort food classics. Every item on our menu is prepared with care because we believe
+        good food should always be satisfying and made right.
+      </p>
+
+      <p>
+        At Little Chickies, customer service matters just as much as the food.
+        We work hard to ensure every order is handled quickly and correctly, and that every customer feels appreciated.
+      </p>
+
+      <p>
+        Thank you for supporting local. We look forward to serving the local community for many years to come.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER (INSIDE BODY) -->
+  <footer class="footer">
+    <div class="footer-content">
+
+      <ul class="footer-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://www.facebook.com/p/Little-Chickies-Pizza-100057653250842/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-copy">
+        © 2026 Little Chickies Pizza. All Rights Reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
