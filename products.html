@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+
+  <title>Menu | Little Chickies Pizza & Takeout</title>
+  <meta name="description" content="View our full menu of pizzas, sides, and beverages at Little Chickies." />
+  <meta name="keywords" content="Little Chickies, pizza menu, takeout menu, pizza prices" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Little Chickies" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- NAV BAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/logo.png" alt="Little Chickies Pizza Logo" class="logo" />
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MENU HEADING -->
+  <h2 class="menu-main-heading">OUR DELICIOUS MENU</h2>
+
+  <!-- CATEGORY TABS -->
+  <div class="menu-tabs">
+    <button class="menu-tab active" onclick="showCategory('all')">
+      <i class="fas fa-pizza-slice"></i> All Pizzas
+    </button>
+    <button class="menu-tab" onclick="showCategory('burgers')">
+      <i class="fas fa-hamburger"></i> Burgers & Platters
+    </button>
+    <button class="menu-tab" onclick="showCategory('seafood')">
+      <i class="fas fa-fish"></i> From the Sea
+    </button>
+    <button class="menu-tab" onclick="showCategory('appetizers')">
+      <i class="fas fa-drumstick-bite"></i> Appetizers & Sides
+    </button>
+    <button class="menu-tab" onclick="showCategory('drinks')">
+      <i class="fas fa-glass-water"></i> Drinks
+    </button>
+  </div>
+
+  <!-- ALL PIZZAS SECTION -->
+  <section class="menu-category" id="all">
+    <h3 class="menu-section-title">Pizzas</h3>
+    <div class="menu-grid-cards">
+      
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/combo-pizza.jpg" alt="Combo Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Combo Pizza</h4>
+          <p class="menu-card-desc">Loaded with pepperoni, mushrooms, and fresh veggies</p>
+          <p class="menu-card-price">Mini $11 | Small $18 | Med $20 | Lg $26 | XLg $27</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/pepperoni-pizza.jpg" alt="Pepperoni Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Pepperoni/Cheese Pizza</h4>
+          <p class="menu-card-desc">Classic pepperoni with mozzarella cheese</p>
+          <p class="menu-card-price">Mini $11 | Small $18 | Med $20 | Lg $26 | XLg $27</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/cheese-pizza.jpg" alt="Cheese Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Cheese Pizza</h4>
+          <p class="menu-card-desc">Our signature cheese pizza with premium mozzarella</p>
+          <p class="menu-card-price">Mini $11 | Small $18 | Med $20 | Lg $26 | XLg $27</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/veggie-pizza.jpg" alt="Veggie Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Veggie Pizza</h4>
+          <p class="menu-card-desc">Fresh mushrooms, peppers, onions, and tomatoes</p>
+          <p class="menu-card-price">Mini $11 | Small $18 | Med $20 | Lg $26 | XLg $27</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/hawaiian-pizza.jpg" alt="Hawaiian Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Hawaiian Pizza</h4>
+          <p class="menu-card-desc">Sweet pineapple and savory ham</p>
+          <p class="menu-card-price">Mini $11 | Small $18 | Med $20 | Lg $26 | XLg $27</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/donair-pizza.jpg" alt="Donair Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Donair Pizza</h4>
+          <p class="menu-card-desc">Donair meat with sweet sauce</p>
+          <p class="menu-card-price">Mini $12 | Small $22 | Med $24 | Lg $30 | XLg $33</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/meatlovers-pizza.jpg" alt="Meatlovers Pizza">
+        </div>
+        <div class="menu-card-content">
+          <h4>Meatlovers Pizza</h4>
+          <p class="menu-card-desc">Pepperoni, ham, bacon, and sausage</p>
+          <p class="menu-card-price">Mini $14 | Small $25 | Med $27 | Lg $32 | XLg $35</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/garlic-fingers.jpg" alt="Garlic Fingers">
+        </div>
+        <div class="menu-card-content">
+          <h4>Garlic Fingers</h4>
+          <p class="menu-card-desc">Garlic butter base with melted cheese</p>
+          <p class="menu-card-price">Mini $10 | Small $17 | Med $18 | Lg $20 | XLg $21</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BURGERS & PLATTERS SECTION -->
+  <section class="menu-category" id="burgers" style="display:none;">
+    <h3 class="menu-section-title">Burgers & Platters</h3>
+    <div class="menu-grid-cards">
+      
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/hamburger.jpg" alt="Hamburger">
+        </div>
+        <div class="menu-card-content">
+          <h4>Hamburger</h4>
+          <p class="menu-card-desc">Classic beef burger</p>
+          <p class="menu-card-price">$8.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/hamburger-platter.jpg" alt="Hamburger Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Hamburger Platter</h4>
+          <p class="menu-card-desc">Burger with fries and drink</p>
+          <p class="menu-card-price">$12.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/cheeseburger.jpg" alt="Cheese Burger">
+        </div>
+        <div class="menu-card-content">
+          <h4>Cheese Burger</h4>
+          <p class="menu-card-desc">Beef burger with melted cheese</p>
+          <p class="menu-card-price">$9.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/cheeseburger-platter.jpg" alt="Cheese Burger Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Cheese Burger Platter</h4>
+          <p class="menu-card-desc">Cheeseburger with fries and drink</p>
+          <p class="menu-card-price">$13.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/deluxe-burger.jpg" alt="Deluxe Burger">
+        </div>
+        <div class="menu-card-content">
+          <h4>Deluxe Burger</h4>
+          <p class="menu-card-desc">Loaded with lettuce, tomato, onion, pickles</p>
+          <p class="menu-card-price">$11.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/deluxe-burger-platter.jpg" alt="Deluxe Burger Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Deluxe Burger Platter</h4>
+          <p class="menu-card-desc">Deluxe burger with fries and drink</p>
+          <p class="menu-card-price">$15.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/chicken-burger.jpg" alt="Chicken Burger">
+        </div>
+        <div class="menu-card-content">
+          <h4>Chicken Burger</h4>
+          <p class="menu-card-desc">Crispy chicken breast burger</p>
+          <p class="menu-card-price">$11.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/chicken-burger-platter.jpg" alt="Chicken Burger Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Chicken Burger Platter</h4>
+          <p class="menu-card-desc">Chicken burger with fries and drink</p>
+          <p class="menu-card-price">$15.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/club-sandwich.jpg" alt="Club Sandwich">
+        </div>
+        <div class="menu-card-content">
+          <h4>Club Sandwich</h4>
+          <p class="menu-card-desc">Triple decker with turkey, bacon, lettuce, tomato</p>
+          <p class="menu-card-price">$11.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/club-platter.jpg" alt="Club Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Club Platter</h4>
+          <p class="menu-card-desc">Club sandwich with fries and drink</p>
+          <p class="menu-card-price">$15.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/hot-hamburger-platter.jpg" alt="Hot Hamburger Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Hot Hamburger Platter</h4>
+          <p class="menu-card-desc">Hot hamburger with gravy and fries</p>
+          <p class="menu-card-price">$16.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/wing-platter.jpg" alt="Wing Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Wing Platter</h4>
+          <p class="menu-card-desc">Crispy wings with fries</p>
+          <p class="menu-card-price">$18.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/chicken-strip-platter.jpg" alt="Chicken Strip Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Chicken Strip Platter</h4>
+          <p class="menu-card-desc">Breaded chicken strips with fries</p>
+          <p class="menu-card-price">$15.00</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FROM THE SEA SECTION -->
+  <section class="menu-category" id="seafood" style="display:none;">
+    <h3 class="menu-section-title">From the Sea</h3>
+    <div class="menu-grid-cards">
+      
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fish-chips-1pc.jpg" alt="1pc Fish & Chips">
+        </div>
+        <div class="menu-card-content">
+          <h4>1pc Fish & Chips</h4>
+          <p class="menu-card-desc">One piece of battered fish with fries</p>
+          <p class="menu-card-price">$12.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fish-chips-2pc.jpg" alt="2pc Fish & Chips">
+        </div>
+        <div class="menu-card-content">
+          <h4>2pc Fish & Chips</h4>
+          <p class="menu-card-desc">Two pieces of battered fish with fries</p>
+          <p class="menu-card-price">$15.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fish-chips-3pc.jpg" alt="3pc Fish & Chips">
+        </div>
+        <div class="menu-card-content">
+          <h4>3pc Fish & Chips</h4>
+          <p class="menu-card-desc">Three pieces of battered fish with fries</p>
+          <p class="menu-card-price">$17.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/clam-platter.jpg" alt="Clam Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Clam Platter</h4>
+          <p class="menu-card-desc">Breaded clams with fries</p>
+          <p class="menu-card-price">$16.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fisherman-platter.jpg" alt="Fisherman's Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Fisherman's Platter</h4>
+          <p class="menu-card-desc">Fish, clams, and fries - the ultimate seafood combo</p>
+          <p class="menu-card-price">$22.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fish-burger-platter.jpg" alt="Fish Burger Platter">
+        </div>
+        <div class="menu-card-content">
+          <h4>Fish Burger Platter</h4>
+          <p class="menu-card-desc">Crispy fish burger with fries and drink</p>
+          <p class="menu-card-price">$13.00</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- APPETIZERS & SIDES SECTION -->
+  <section class="menu-category" id="appetizers" style="display:none;">
+    <h3 class="menu-section-title">Appetizers & Sides</h3>
+    <div class="menu-grid-cards">
+      
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/veggie-basket.jpg" alt="Deep Fried Veggie Basket">
+        </div>
+        <div class="menu-card-content">
+          <h4>Deep Fried Veggie Basket</h4>
+          <p class="menu-card-desc">Assorted deep fried vegetables</p>
+          <p class="menu-card-price">$12.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/munchie-basket.jpg" alt="Munchie Basket">
+        </div>
+        <div class="menu-card-content">
+          <h4>Munchie Basket</h4>
+          <p class="menu-card-desc">Onion rings, mozza sticks, chicken strips</p>
+          <p class="menu-card-price">$18.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/super-munchie.jpg" alt="Super Munchie">
+        </div>
+        <div class="menu-card-content">
+          <h4>Super Munchie</h4>
+          <p class="menu-card-desc">Extra large munchie basket</p>
+          <p class="menu-card-price">$28.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fried-pickles.jpg" alt="Deep Fried Pickles">
+        </div>
+        <div class="menu-card-content">
+          <h4>Deep Fried Pickles</h4>
+          <p class="menu-card-desc">Crispy battered pickle spears</p>
+          <p class="menu-card-price">$10.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fried-pepperoni.jpg" alt="Deep Fried Pepperoni">
+        </div>
+        <div class="menu-card-content">
+          <h4>Deep Fried Pepperoni</h4>
+          <p class="menu-card-desc">Crispy pepperoni bites</p>
+          <p class="menu-card-price">$13.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/mozza-sticks.jpg" alt="Mozza Sticks">
+        </div>
+        <div class="menu-card-content">
+          <h4>Mozza Sticks</h4>
+          <p class="menu-card-desc">Golden fried mozzarella sticks</p>
+          <p class="menu-card-price">$10.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/jalapeno-poppers.jpg" alt="Jalapeno Poppers">
+        </div>
+        <div class="menu-card-content">
+          <h4>Jalapeno Poppers</h4>
+          <p class="menu-card-desc">Cream cheese stuffed jalapenos</p>
+          <p class="menu-card-price">$10.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/nachos.jpg" alt="Nachos">
+        </div>
+        <div class="menu-card-content">
+          <h4>Nachos</h4>
+          <p class="menu-card-desc">Tortilla chips with cheese</p>
+          <p class="menu-card-price">$13.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/deluxe-nachos.jpg" alt="Deluxe Nachos">
+        </div>
+        <div class="menu-card-content">
+          <h4>Deluxe Nachos</h4>
+          <p class="menu-card-desc">Loaded nachos with all the toppings</p>
+          <p class="menu-card-price">$16.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/fries.jpg" alt="Fries">
+        </div>
+        <div class="menu-card-content">
+          <h4>Fries</h4>
+          <p class="menu-card-desc">Crispy golden fries</p>
+          <p class="menu-card-price">Small $5 | Large $7</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/onion-rings.jpg" alt="Onion Rings">
+        </div>
+        <div class="menu-card-content">
+          <h4>Onion Rings</h4>
+          <p class="menu-card-desc">Beer-battered onion rings</p>
+          <p class="menu-card-price">Small $7 | Large $9</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/wings.jpg" alt="Wings">
+        </div>
+        <div class="menu-card-content">
+          <h4>Wings</h4>
+          <p class="menu-card-desc">Choose: Regular, Battered, or Boneless</p>
+          <p class="menu-card-price">Reg/Boneless $13-$16 | Battered $18</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/poutine.jpg" alt="Poutine">
+        </div>
+        <div class="menu-card-content">
+          <h4>Poutine</h4>
+          <p class="menu-card-desc">Fries, gravy, and cheese curds. Add bacon or donair meat!</p>
+          <p class="menu-card-price">Sm $7 | Lg $11 | Bacon/Donair $14</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DRINKS SECTION -->
+  <section class="menu-category" id="drinks" style="display:none;">
+    <h3 class="menu-section-title">Drinks</h3>
+    <div class="menu-grid-cards">
+      
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/2l-pop.jpg" alt="2L Pop">
+        </div>
+        <div class="menu-card-content">
+          <h4>2L Pop</h4>
+          <p class="menu-card-desc">Pepsi, Coke, Sprite, and more</p>
+          <p class="menu-card-price">$4.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/small-pop.jpg" alt="Small Pop">
+        </div>
+        <div class="menu-card-content">
+          <h4>Small Pop</h4>
+          <p class="menu-card-desc">355ml can</p>
+          <p class="menu-card-price">$2.00</p>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-image">
+          <img src="images/menu/chocolate-milk.jpg" alt="Chocolate Milk">
+        </div>
+        <div class="menu-card-content">
+          <h4>Chocolate Milk</h4>
+          <p class="menu-card-desc">Creamy chocolate milk</p>
+          <p class="menu-card-price">$3.00</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CALL BANNER -->
+  <section class="menu-call-banner">
+    <img src="images/homebanner.jpg" alt="Call Little Chickies Now">
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.facebook.com/p/Little-Chickies-Pizza-100057653250842/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-copy">
+        © 2026 Little Chickies Pizza. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+
+    function showCategory(category) {
+      // Hide all categories
+      const categories = document.querySelectorAll('.menu-category');
+      categories.forEach(cat => cat.style.display = 'none');
+      
+      // Remove active class from all tabs
+      const tabs = document.querySelectorAll('.menu-tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      
+      // Show selected category
+      document.getElementById(category).style.display = 'block';
+      
+      // Add active class to clicked tab
+      event.target.closest('.menu-tab').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
