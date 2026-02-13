@@ -481,3 +481,15 @@ body {
   }
 
 }
+
+
+/* ===== ABOUT INLINE IMAGE (BURGER) ===== */
+
+.about-inline-banner {
+  width: 90%;
+  max-width: 1200;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+}
