@@ -455,3 +455,29 @@ body {
   background: #ffcc00;     /* yellow */
   color: #d62828;          /* red text */
 }
+
+
+@media (max-width: 768px) {
+
+  .specials {
+    padding: 30px 5% 40px;
+  }
+
+  .specials-heading {
+    margin: 30px 0 20px 0;
+  }
+
+  .promo-banner {
+    margin: 20px 0;
+  }
+
+  .home-call-banner-section {
+    margin: 20px 0;
+    padding: 0 3%;
+  }
+
+  .view-menu-wrapper {
+    margin: 20px 0;
+  }
+
+}
