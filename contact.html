@@ -4,11 +4,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8" />
 
-  <title>Little Chickies | Pizza & Takeout</title>
-  <meta name="description" content="Little Chickies is a local pizza place serving fresh, hot pizza and takeout favourites." />
-  <meta name="keywords" content="Little Chickies, pizza, takeout, restaurant, local pizza" />
+  <title>Contact | Little Chickies Pizza</title>
+  <meta name="description" content="Contact Little Chickies Pizza for orders, questions, or catering inquiries." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Little Chickies" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -23,60 +21,61 @@
 
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-links">
+  <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-
       <li><a href="about.html">About</a></li>
       <li><a href="products.html">Menu</a></li>
       <li><a href="contact.html">Contact</a></li>
+
     </ul>
   </nav>
 
-  <!-- HERO / SLIDESHOW -->
-  <header class="hero" id="home">
-    <img src="images/food.jpg" class="hero-image active" />
-    <img src="images/image2.jpg" class="hero-image" />
-    <img src="images/image3.jpg" class="hero-image" />
-  </header>
+<!-- TOP HERO BANNER -->
+<!-- CONTACT TOP IMAGE -->
+<div class="contact-banner">
+  <img src="images/contact-banner.jpg" class="contact-banner-img">
+</div>
 
-  <!-- SPECIALS SECTION -->
-  <h2 class="specials-heading">OUR SPECIALS</h2>
 
-  <section class="specials">
-    <div class="special-item">
-      <img src="images/image4.jpg" alt="Large Pizza & 2L Pop Special" />
-    </div>
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-section">
+    <h2 class="contact-heading">Get In Touch</h2>
 
-    <div class="special-item">
-      <img src="images/image5.jpg" alt="X-Large Pizza & 2L Pop Special" />
-    </div>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="Subject">
+      </div>
+
+      <div class="form-group">
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
   </section>
 
-  <!-- PROMO BANNER -->
-  <section class="promo-banner">
-    <img src="images/banner.jpg" alt="Little Chickies Promotion Banner" />
-  </section>
-
-  <!-- VIEW MENU BUTTON -->
-  <div class="view-menu-wrapper">
-    <a href="products.html" class="view-menu-btn">VIEW MENU</a>
-  </div>
-
-  <!-- HOME CALL BANNER -->
+  <!-- CALL BANNER (SAME AS OTHER PAGES) -->
   <section class="home-call-banner-section">
     <img src="images/homebanner.jpg" class="home-call-banner-img" alt="Call Little Chickies Now">
   </section>
+<script src="script.js"></script>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
-
         <li><a href="about.html">About</a></li>
         <li><a href="products.html">Menu</a></li>
-
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li>
           <a href="https://www.facebook.com/p/Little-Chickies-Pizza-100057653250842/" target="_blank">
             <i class="fa-brands fa-facebook"></i>
@@ -89,9 +88,6 @@
       </p>
     </div>
   </footer>
-
-  <!-- Script -->
-  <script src="script.js"></script>
 
   <script>
     function toggleMenu() {
