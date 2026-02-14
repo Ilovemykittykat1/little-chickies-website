@@ -36,25 +36,148 @@
   <h2 class="menu-main-heading">OUR DELICIOUS MENU</h2>
 
   <!-- CATEGORY TABS -->
-  <div class="menu-tabs">
-    <button class="menu-tab active" onclick="showCategory('all')">
-      <i class="fas fa-pizza-slice"></i> All Pizzas
-    </button>
-    <button class="menu-tab" onclick="showCategory('burgers')">
-      <i class="fas fa-hamburger"></i> Burgers & Platters
-    </button>
-    <button class="menu-tab" onclick="showCategory('seafood')">
-      <i class="fas fa-fish"></i> From the Sea
-    </button>
-    <button class="menu-tab" onclick="showCategory('appetizers')">
-      <i class="fas fa-drumstick-bite"></i> Appetizers & Sides
-    </button>
-    <button class="menu-tab" onclick="showCategory('drinks')">
-      <i class="fas fa-glass-water"></i> Drinks
-    </button>
-  </div>
+ <div class="menu-tabs">
+  <button class="menu-tab active" onclick="showCategory('all')">
+    <i class="fas fa-pizza-slice"></i> All Pizzas
+  </button>
+
+  <button class="menu-tab" onclick="showCategory('burgers')">
+    <i class="fas fa-hamburger"></i> Burgers & Platters
+  </button>
+
+  <button class="menu-tab" onclick="showCategory('seafood')">
+    <i class="fas fa-fish"></i> From the Sea
+  </button>
+
+  <button class="menu-tab" onclick="showCategory('appetizers')">
+    <i class="fas fa-drumstick-bite"></i> Appetizers & Sides
+  </button>
+
+  <button class="menu-tab" onclick="showCategory('drinks')">
+    <i class="fas fa-glass-water"></i> Drinks
+  </button>
+
+  <button class="menu-tab" onclick="showCategory('kids')">
+    <i class="fas fa-child"></i> Kids Menu
+  </button>
+
+  <button class="menu-tab" onclick="showCategory('subs')">
+    <i class="fas fa-bread-slice"></i> Subs & Wraps
+  </button>
+</div>
+
 
   <!-- ALL PIZZAS SECTION -->
+   <!-- SUBS & WRAPS SECTION -->
+
+   <section class="menu-category" id="subs" style="display:none;">
+  <h3 class="menu-section-title">Subs & Wraps</h3>
+  <div class="menu-grid-cards">
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/sub-combo.jpg" alt="Combo Sub">
+      </div>
+      <div class="menu-card-content">
+        <h4>Combo</h4>
+        <p class="menu-card-price">Small $5.00 | Large $10.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/sub-pep-cheese.jpg" alt="Pepperoni Cheese Sub">
+      </div>
+      <div class="menu-card-content">
+        <h4>Pep/Cheese</h4>
+        <p class="menu-card-price">Small $5.00 | Large $10.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/sub-donair.jpg" alt="Donair Sub">
+      </div>
+      <div class="menu-card-content">
+        <h4>Donair</h4>
+        <p class="menu-card-price">Small $7.00 | Large $14.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/sub-steak.jpg" alt="Steak Sub">
+      </div>
+      <div class="menu-card-content">
+        <h4>Steak</h4>
+        <p class="menu-card-price">Small $7.00 | Large $14.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/sub-hero.jpg" alt="Hero Sub">
+      </div>
+      <div class="menu-card-content">
+        <h4>Hero</h4>
+        <p class="menu-card-price">Small $7.00 | Large $14.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/sub-club.jpg" alt="Club Sub">
+      </div>
+      <div class="menu-card-content">
+        <h4>Club</h4>
+        <p class="menu-card-price">Small $7.00 | Large $14.00</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- KIDS MENU SECTION -->
+<section class="menu-category" id="kids" style="display:none;">
+  <h3 class="menu-section-title">Kids Menu</h3>
+  <div class="menu-grid-cards">
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/kids-hamburger.jpg" alt="Kids Hamburger Platter">
+      </div>
+      <div class="menu-card-content">
+        <h4>Hamburger Platter</h4>
+        <p class="menu-card-price">$7.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/kids-strips.jpg" alt="2 Strip Platter">
+      </div>
+      <div class="menu-card-content">
+        <h4>2 Strip Platter</h4>
+        <p class="menu-card-price">$8.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/kids-hotdog.jpg" alt="Hotdog Platter">
+      </div>
+      <div class="menu-card-content">
+        <h4>Hotdog Platter</h4>
+        <p class="menu-card-price">$5.00</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
   <section class="menu-category" id="all">
     <h3 class="menu-section-title">Pizzas</h3>
     <div class="menu-grid-cards">
@@ -375,156 +498,205 @@
     </div>
   </section>
 
-  <!-- APPETIZERS & SIDES SECTION -->
-  <section class="menu-category" id="appetizers" style="display:none;">
-    <h3 class="menu-section-title">Appetizers & Sides</h3>
-    <div class="menu-grid-cards">
-      
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/veggie-basket.jpg" alt="Deep Fried Veggie Basket">
-        </div>
-        <div class="menu-card-content">
-          <h4>Deep Fried Veggie Basket</h4>
-          <p class="menu-card-desc">Assorted deep fried vegetables</p>
-          <p class="menu-card-price">$12.00</p>
-        </div>
-      </div>
+ <!-- APPETIZERS & SIDES SECTION -->
+<section class="menu-category" id="appetizers" style="display:none;">
+  <h3 class="menu-section-title">Appetizers & Sides</h3>
+  <div class="menu-grid-cards">
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/munchie-basket.jpg" alt="Munchie Basket">
-        </div>
-        <div class="menu-card-content">
-          <h4>Munchie Basket</h4>
-          <p class="menu-card-desc">Onion rings, mozza sticks, chicken strips</p>
-          <p class="menu-card-price">$18.00</p>
-        </div>
-      </div>
+    <!-- Pizza Slice -->
+    <!-- Pizza Slice -->
+<div class="menu-card">
+  <div class="menu-card-image">
+    <img src="images/menu/pizza-slice.jpg" alt="Pizza Slice">
+  </div>
+  <div class="menu-card-content">
+    <h4>Pizza Slice</h4>
+    <p class="menu-card-price">$5.50</p>
+  </div>
+</div>
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/super-munchie.jpg" alt="Super Munchie">
-        </div>
-        <div class="menu-card-content">
-          <h4>Super Munchie</h4>
-          <p class="menu-card-desc">Extra large munchie basket</p>
-          <p class="menu-card-price">$28.00</p>
-        </div>
-      </div>
+<!-- Pizza Slice and Pop -->
+<div class="menu-card">
+  <div class="menu-card-image">
+    <img src="images/menu/pizza-slice-pop.jpg" alt="Pizza Slice and Pop">
+  </div>
+  <div class="menu-card-content">
+    <h4>Pizza Slice and Pop</h4>
+    <p class="menu-card-price">$7.00</p>
+  </div>
+</div>
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/fried-pickles.jpg" alt="Deep Fried Pickles">
-        </div>
-        <div class="menu-card-content">
-          <h4>Deep Fried Pickles</h4>
-          <p class="menu-card-desc">Crispy battered pickle spears</p>
-          <p class="menu-card-price">$10.00</p>
-        </div>
-      </div>
+<!-- Chicken Quesadilla -->
+<div class="menu-card">
+  <div class="menu-card-image">
+    <img src="images/menu/chicken-quesadilla.jpg" alt="Chicken Quesadilla">
+  </div>
+  <div class="menu-card-content">
+    <h4>Chicken Quesadilla</h4>
+    <p class="menu-card-price">$17.00</p>
+  </div>
+</div>
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/fried-pepperoni.jpg" alt="Deep Fried Pepperoni">
-        </div>
-        <div class="menu-card-content">
-          <h4>Deep Fried Pepperoni</h4>
-          <p class="menu-card-desc">Crispy pepperoni bites</p>
-          <p class="menu-card-price">$13.00</p>
-        </div>
-      </div>
+<!-- Steak Quesadilla -->
+<div class="menu-card">
+  <div class="menu-card-image">
+    <img src="images/menu/steak-quesadilla.jpg" alt="Steak Quesadilla">
+  </div>
+  <div class="menu-card-content">
+    <h4>Steak Quesadilla</h4>
+    <p class="menu-card-price">$19.00</p>
+  </div>
+</div>
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/mozza-sticks.jpg" alt="Mozza Sticks">
-        </div>
-        <div class="menu-card-content">
-          <h4>Mozza Sticks</h4>
-          <p class="menu-card-desc">Golden fried mozzarella sticks</p>
-          <p class="menu-card-price">$10.00</p>
-        </div>
-      </div>
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/jalapeno-poppers.jpg" alt="Jalapeno Poppers">
-        </div>
-        <div class="menu-card-content">
-          <h4>Jalapeno Poppers</h4>
-          <p class="menu-card-desc">Cream cheese stuffed jalapenos</p>
-          <p class="menu-card-price">$10.00</p>
-        </div>
-      </div>
+    <!-- Existing Items Below -->
 
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/nachos.jpg" alt="Nachos">
-        </div>
-        <div class="menu-card-content">
-          <h4>Nachos</h4>
-          <p class="menu-card-desc">Tortilla chips with cheese</p>
-          <p class="menu-card-price">$13.00</p>
-        </div>
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/veggie-basket.jpg" alt="Deep Fried Veggie Basket">
       </div>
-
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/deluxe-nachos.jpg" alt="Deluxe Nachos">
-        </div>
-        <div class="menu-card-content">
-          <h4>Deluxe Nachos</h4>
-          <p class="menu-card-desc">Loaded nachos with all the toppings</p>
-          <p class="menu-card-price">$16.00</p>
-        </div>
+      <div class="menu-card-content">
+        <h4>Deep Fried Veggie Basket</h4>
+        <p class="menu-card-desc">Assorted deep fried vegetables</p>
+        <p class="menu-card-price">$12.00</p>
       </div>
-
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/fries.jpg" alt="Fries">
-        </div>
-        <div class="menu-card-content">
-          <h4>Fries</h4>
-          <p class="menu-card-desc">Crispy golden fries</p>
-          <p class="menu-card-price">Small $5 | Large $7</p>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/onion-rings.jpg" alt="Onion Rings">
-        </div>
-        <div class="menu-card-content">
-          <h4>Onion Rings</h4>
-          <p class="menu-card-desc">Beer-battered onion rings</p>
-          <p class="menu-card-price">Small $7 | Large $9</p>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/wings.jpg" alt="Wings">
-        </div>
-        <div class="menu-card-content">
-          <h4>Wings</h4>
-          <p class="menu-card-desc">Choose: Regular, Battered, or Boneless</p>
-          <p class="menu-card-price">Reg/Boneless $13-$16 | Battered $18</p>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-image">
-          <img src="images/menu/poutine.jpg" alt="Poutine">
-        </div>
-        <div class="menu-card-content">
-          <h4>Poutine</h4>
-          <p class="menu-card-desc">Fries, gravy, and cheese curds. Add bacon or donair meat!</p>
-          <p class="menu-card-price">Sm $7 | Lg $11 | Bacon/Donair $14</p>
-        </div>
-      </div>
-
     </div>
-  </section>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/munchie-basket.jpg" alt="Munchie Basket">
+      </div>
+      <div class="menu-card-content">
+        <h4>Munchie Basket</h4>
+        <p class="menu-card-desc">Onion rings, mozza sticks, chicken strips</p>
+        <p class="menu-card-price">$18.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/super-munchie.jpg" alt="Super Munchie">
+      </div>
+      <div class="menu-card-content">
+        <h4>Super Munchie</h4>
+        <p class="menu-card-desc">Extra large munchie basket</p>
+        <p class="menu-card-price">$28.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/fried-pickles.jpg" alt="Deep Fried Pickles">
+      </div>
+      <div class="menu-card-content">
+        <h4>Deep Fried Pickles</h4>
+        <p class="menu-card-desc">Crispy battered pickle spears</p>
+        <p class="menu-card-price">$10.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/fried-pepperoni.jpg" alt="Deep Fried Pepperoni">
+      </div>
+      <div class="menu-card-content">
+        <h4>Deep Fried Pepperoni</h4>
+        <p class="menu-card-desc">Crispy pepperoni bites</p>
+        <p class="menu-card-price">$13.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/mozza-sticks.jpg" alt="Mozza Sticks">
+      </div>
+      <div class="menu-card-content">
+        <h4>Mozza Sticks</h4>
+        <p class="menu-card-desc">Golden fried mozzarella sticks</p>
+        <p class="menu-card-price">$10.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/jalapeno-poppers.jpg" alt="Jalapeno Poppers">
+      </div>
+      <div class="menu-card-content">
+        <h4>Jalapeno Poppers</h4>
+        <p class="menu-card-desc">Cream cheese stuffed jalapenos</p>
+        <p class="menu-card-price">$10.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/nachos.jpg" alt="Nachos">
+      </div>
+      <div class="menu-card-content">
+        <h4>Nachos</h4>
+        <p class="menu-card-desc">Tortilla chips with cheese</p>
+        <p class="menu-card-price">$13.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/deluxe-nachos.jpg" alt="Deluxe Nachos">
+      </div>
+      <div class="menu-card-content">
+        <h4>Deluxe Nachos</h4>
+        <p class="menu-card-desc">Loaded nachos with all the toppings</p>
+        <p class="menu-card-price">$16.00</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/fries.jpg" alt="Fries">
+      </div>
+      <div class="menu-card-content">
+        <h4>Fries</h4>
+        <p class="menu-card-desc">Crispy golden fries</p>
+        <p class="menu-card-price">Small $5 | Large $7</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/onion-rings.jpg" alt="Onion Rings">
+      </div>
+      <div class="menu-card-content">
+        <h4>Onion Rings</h4>
+        <p class="menu-card-desc">Beer-battered onion rings</p>
+        <p class="menu-card-price">Small $7 | Large $9</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/wings.jpg" alt="Wings">
+      </div>
+      <div class="menu-card-content">
+        <h4>Wings</h4>
+        <p class="menu-card-desc">Choose: Regular, Battered, or Boneless</p>
+        <p class="menu-card-price">Reg/Boneless $13-$16 | Battered $18</p>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-card-image">
+        <img src="images/menu/poutine.jpg" alt="Poutine">
+      </div>
+      <div class="menu-card-content">
+        <h4>Poutine</h4>
+        <p class="menu-card-desc">Fries, gravy, and cheese curds. Add bacon or donair meat!</p>
+        <p class="menu-card-price">Sm $7 | Lg $11 | Bacon/Donair $14</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- DRINKS SECTION -->
   <section class="menu-category" id="drinks" style="display:none;">
@@ -568,9 +740,9 @@
   </section>
 
   <!-- CALL BANNER -->
-  <section class="menu-call-banner">
-    <img src="images/homebanner.jpg" alt="Call Little Chickies Now">
-  </section>
+ <section class="home-call-banner-section">
+  <img src="images/homebanner.jpg" class="home-call-banner-img" alt="Call Little Chickies Now">
+</section>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -596,26 +768,34 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('active');
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+
+  function showCategory(category) {
+
+    // Hide all categories
+    const categories = document.querySelectorAll('.menu-category');
+    categories.forEach(cat => cat.style.display = 'none');
+
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.menu-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Show selected category
+    const selected = document.getElementById(category);
+    if (selected) {
+      selected.style.display = 'block';
     }
 
-    function showCategory(category) {
-      // Hide all categories
-      const categories = document.querySelectorAll('.menu-category');
-      categories.forEach(cat => cat.style.display = 'none');
-      
-      // Remove active class from all tabs
-      const tabs = document.querySelectorAll('.menu-tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      
-      // Show selected category
-      document.getElementById(category).style.display = 'block';
-      
-      // Add active class to clicked tab
-      event.target.closest('.menu-tab').classList.add('active');
+    // Add active class safely
+    const clickedTab = document.querySelector(`.menu-tab[onclick="showCategory('${category}')"]`);
+    if (clickedTab) {
+      clickedTab.classList.add('active');
     }
-  </script>
+  }
+</script>
+
 
 </body>
 </html>
