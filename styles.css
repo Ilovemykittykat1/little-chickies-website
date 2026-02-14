@@ -107,9 +107,20 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  padding: 0 4% 0;
+  padding: 80px 4% 100px;
   width: 100%;
-  margin-bottom: 50px;
+}
+
+/* real heading */
+.specials-heading {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  text-shadow: 2px 2px 0 #000;
+  margin: 60px 0 40px 0;
 }
 
 /* card style */
@@ -870,6 +881,15 @@ no i cant find that im here
     object-fit: contain;
   }
 
+@media (max-width: 767px) {
+
+  .specials {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 8% 60px;
+  }
+
+}
 
 
 
