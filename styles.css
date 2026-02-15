@@ -921,6 +921,9 @@ no i cant find that im here
   }
 
   .about-banner-img {
+
+
+    
     height: auto;
     object-fit: contain;
   }
@@ -1010,82 +1013,46 @@ body.dark-mode .footer-copy {
 }
 
 
-/* ===== RED & WHITE TOGGLE ===== */
+/* ===== THEME TOGGLE CLEAN VERSION ===== */
 
-.theme-toggle-container {
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-/* ===== RED / WHITE TOGGLE ===== */
 .theme-toggle {
-  width: 60px;
-  height: 30px;
+  width: 50px;
+  height: 25px;
   background: #d62828;
   border-radius: 50px;
-  border: 2px solid #000;
+  border: none;
   position: relative;
   cursor: pointer;
-  padding: 0;
-  overflow: hidden;
+  transition: 0.3s ease;
 }
 
-/* circle */
 .toggle-circle {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: #ffffff;
   border-radius: 50%;
   position: absolute;
-  top: 1px;
-  left: 2px;
-  transition: left 0.3s ease;
-}
-
-/* DARK MODE ACTIVE STATE */
-body.dark-mode .toggle-circle {
-  left: 30px;  /* perfectly inside */
+  top: 2.5px;
+  left: 3px;
+  transition: 0.3s ease;
 }
 
 body.dark-mode .toggle-circle {
-  left: 32px;
-  background: #ffffff;
+  transform: translateX(22px);
 }
-/* ===== THEME TOGGLE POSITION ===== */
+
+
+
+
 .theme-toggle-container {
+  margin: 20px 30px 0 0;
   display: flex;
-  justify-content: center;
-  margin: 25px 0;
+  justify-content: flex-end;
 }
 
-/* ===== RED / WHITE TOGGLE ===== */
-.theme-toggle {
-  width: 60px;
-  height: 30px;
-  background: #d62828; /* red */
-  border-radius: 50px;
-  border: 2px solid #000;
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-  transition: 0.3s ease;
-}
 
-.toggle-circle {
-  width: 24px;
-  height: 24px;
-  background: #ffffff; /* white */
-  border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  transition: 0.3s ease;
-}
 
-/* when dark mode is on */
-body.dark-mode .toggle-circle {
-  transform: translateX(28px);
-}
 /* Fix text in dark mode */
 body.dark-mode .about-container p,
 body.dark-mode .contact-section p,
@@ -1093,4 +1060,29 @@ body.dark-mode .menu-card-desc,
 body.dark-mode .menu-card-price,
 body.dark-mode .testimonials-closing p {
   color: #ffffff;
+}
+.mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktop-toggle {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+}
+/* Make toggle visible inside red mobile nav */
+.mobile-toggle .theme-toggle {
+  background: #ffffff;        /* white track */
+  border: 2px solid #ffffff;  /* white outline */
+}
+
+.mobile-toggle .toggle-circle {
+  background: #d62828;        /* red circle */
 }
