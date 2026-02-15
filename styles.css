@@ -673,19 +673,77 @@ no i cant find that im here
     padding: 0 8%;
   }
 
-  .testimonials-section {
-    padding: 30px 8%;
-    margin: 30px 0;
-  }
+  /* ===== TESTIMONIALS SECTION ===== */
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials-section {
+  background: #ffffff;
+  padding: 80px 4%;
+  text-align: center;
+  margin: 80px 0;
+}
 
-  .testimonials-heading {
-    margin-bottom: 30px;
-  }
+.testimonials-heading {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  margin-bottom: 60px;
+}
 
-  .testimonials-closing {
-    margin: 30px auto 0;
-    padding: 0 8%;
+/* PERFECT EVEN GRID */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* always 4 even columns */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CLEAN CARD DESIGN */
+.testimonial-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  border: 2px solid crimson;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px; /* forces equal height */
+}
+
+/* subtle hover */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(214, 40, 40, 0.2);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Hover lift */
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(214, 40, 40, 0.25);
+}
+
 
   /* MENU PAGE MOBILE */
   .menu-main-heading {
