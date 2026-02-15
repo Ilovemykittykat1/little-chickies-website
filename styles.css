@@ -69,7 +69,7 @@ body {
   margin: 30px auto;
   position: relative;
   overflow: hidden;
-border: 2px solid #ffcc00;
+border: 2px solid  crimson;
 
   border-radius: 18px;
 }
@@ -108,6 +108,16 @@ border: 2px solid #ffcc00;
   text-shadow: 2px 2px 0 #000;
   margin: 80px 0 50px 0;
 }
+.bottom-section-heading {
+  text-align: center;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  text-shadow: 3px 3px 0 #000;
+  margin: 70px 0 35px 0;
+}
 
 .specials {
   display: flex;
@@ -135,7 +145,7 @@ border: 2px solid #ffcc00;
   flex: 0 0 auto;
   width: 100%;
   max-width: 420px;   /* smaller */
-  border: 2px solid #ffcc00;
+  border: 2px solid crimson;
 
   border-radius: 16px;
   box-shadow: 0 10px 26px rgba(0,0,0,0.18);
@@ -160,7 +170,7 @@ border: 2px solid #ffcc00;
   height: auto;          /* let image scale naturally */
   object-fit: contain;   /* or remove this entirely */
 
-  border: 4px solid #ffcc00;
+  border: 4px solid  crimson;
   border-radius: 20px;
 }
 
@@ -204,9 +214,11 @@ border: 2px solid #ffcc00;
 }
 
 .home-call-banner-img {
-  width: 100%;
-  height: auto;          /* 👈 key change */
+  width: 85%;          /* makes it smaller */
+  max-width: 900px;    /* optional cap */
+  height: auto;
   display: block;
+  margin: 0 auto;      /* keeps it centered */
   border-radius: 12px;
 }
 
@@ -921,3 +933,5 @@ no i cant find that im here
   height: 180px;
   width: auto;
 }
+
+
