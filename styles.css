@@ -1017,38 +1017,37 @@ body.dark-mode .footer-copy {
 
 
 .theme-toggle {
+  position: absolute;
+  right: 80px;
+  top: 18px;
+
   width: 50px;
-  height: 25px;
-  background: #d62828;
+  height: 24px;
+
+  background: #ffffff;          /* visible against red */
   border-radius: 50px;
-  border: none;
-  position: relative;
+  border: 2px solid #ffffff;
+
   cursor: pointer;
-  transition: 0.3s ease;
+  padding: 0;
 }
 
 .toggle-circle {
-  width: 20px;
-  height: 20px;
-  background: #ffffff;
+  width: 18px;
+  height: 18px;
+
+  background: #d62828;          /* red knob */
   border-radius: 50%;
+
   position: absolute;
-  top: 2.5px;
+  top: 2px;
   left: 3px;
-  transition: 0.3s ease;
+
+  transition: transform 0.3s ease;
 }
 
 body.dark-mode .toggle-circle {
-  transform: translateX(22px);
-}
-
-
-
-
-.theme-toggle-container {
-  margin: 20px 30px 0 0;
-  display: flex;
-  justify-content: flex-end;
+  transform: translateX(24px);
 }
 
 
