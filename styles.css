@@ -64,7 +64,7 @@ body {
 
 .hero {
   width: 100%;
-  max-width: 950px;
+  max-width: 700px;
   aspect-ratio: 16 / 9;   /* keeps same shape always */
   margin: 30px auto;
   position: relative;
@@ -78,7 +78,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: fill;   /* fills box */
+  object-fit: cover;   /* fills box */
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
@@ -578,23 +578,7 @@ body {
     padding: 12px 0;
   }
 
-  /* HERO MOBILE */
-  .hero {
-    height: auto;
-  }
-
-  .hero-image {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .hero-image.active {
-    display: block;
-  }
-
+  
   /* SPACING ADJUSTMENTS FOR MOBILE */
   .specials-heading {
     margin: 40px 0 30px 0;
@@ -945,12 +929,11 @@ no i cant find that im here
   }
 
   .home-call-left img {
-    max-height: 90px;
-  }
-
-  
-  .home-call-right img {
-    max-height: 120px;
-  }
+  height: 140px;
+  width: auto;
 }
 
+.home-call-right img {
+  height: 180px;
+  width: auto;
+}
