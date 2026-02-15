@@ -1026,3 +1026,21 @@ body.dark-mode .testimonials-closing p {
 .mobile-toggle .toggle-circle {
   background: #d62828;        /* red circle */
 }
+/* ================= TESTIMONIALS MOBILE ONLY ================= */
+@media (max-width: 767px) {
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 25px 18px;
+    font-size: 16px;
+  }
+
+  .testimonials-section {
+    padding: 40px 6%;
+    margin: 40px 0;
+  }
+
+}
