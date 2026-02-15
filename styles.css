@@ -1,3 +1,5 @@
+/* ================= GLOBAL RESET ================= */
+/* Removes default browser spacing and sets base font */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +7,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ================= BODY ================= */
+/* Base background, text color, and prevents horizontal scroll */
 body {
   background: #ffffff;
   color: #000;
@@ -12,6 +16,7 @@ body {
 }
 
 /* ================= NAV BAR ================= */
+/* Main navigation container */
 .navbar {
   position: relative;
   display: flex;
@@ -23,16 +28,19 @@ body {
   z-index: 1000;
 }
 
+/* Left side of navbar holding logo */
 .nav-left {
   display: flex;
   align-items: center;
 }
 
+/* Logo size */
 .logo {
   height: 60px;
 }
 
-/* HAMBURGER */
+/* ================= HAMBURGER MENU ================= */
+/* Hidden on desktop, visible on mobile */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -40,13 +48,15 @@ body {
   cursor: pointer;
 }
 
-/* DESKTOP NAV */
+/* ================= DESKTOP NAV LINKS ================= */
+/* Horizontal navigation list */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
+/* Navigation link styling */
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -54,50 +64,42 @@ body {
   font-size: 16px;
 }
 
+/* Hover underline effect */
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-
-
-/* ================= HERO ================= */
-
+/* ================= HERO SECTION ================= */
+/* Main hero image container */
 .hero {
   width: 100%;
   max-width: 1050px;
-  aspect-ratio: 21 / 11;   /* more wide, less tall */
+  aspect-ratio: 21 / 11;
   margin: 30px auto;
   position: relative;
   overflow: hidden;
-border: 2px solid  crimson;
-
+  border: 2px solid crimson;
   border-radius: 18px;
 }
 
-
+/* Hero images positioned for slideshow fade effect */
 .hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* fills box */
+  object-fit: cover;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
 
+/* Active hero image visible */
 .hero-image.active {
   opacity: 1;
 }
 
-
-
-
-
-
-
-
-
 /* ================= SPECIALS SECTION ================= */
+/* Main specials heading */
 .specials-heading {
   text-align: center;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -108,6 +110,8 @@ border: 2px solid  crimson;
   text-shadow: 2px 2px 0 #000;
   margin: 80px 0 50px 0;
 }
+
+/* Secondary heading used in bottom sections */
 .bottom-section-heading {
   text-align: center;
   font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -119,6 +123,7 @@ border: 2px solid  crimson;
   margin: 70px 0 35px 0;
 }
 
+/* Specials container layout */
 .specials {
   display: flex;
   justify-content: center;
@@ -128,65 +133,45 @@ border: 2px solid  crimson;
   width: 100%;
 }
 
-/* real heading */
-.specials-heading {
-  text-align: center;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #d62828;
-  text-shadow: 2px 2px 0 #000;
-  margin: 60px 0 40px 0;
-}
-
-/* card style */
+/* Individual special card */
 .special-item {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 420px;   /* smaller */
+  max-width: 420px;
   border: 2px solid crimson;
-
   border-radius: 16px;
   box-shadow: 0 10px 26px rgba(0,0,0,0.18);
   overflow: hidden;
   background: transparent;
 }
 
-/* image */
+/* Special image styling */
 .special-item img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Promotional banner image */
 .promo-banner img {
   display: block;
   margin: 0 auto;
-
   width: 100%;
   max-width: 1000px;
-
-  height: auto;          /* let image scale naturally */
-  object-fit: contain;   /* or remove this entirely */
-
-  border: 2px solid  crimson;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid crimson;
   border-radius: 20px;
 }
 
-
-
-
-
-
-
-/* ===== VIEW MENU BUTTON ===== */
+/* ================= VIEW MENU BUTTON ================= */
+/* Wrapper for centering button */
 .view-menu-wrapper {
   text-align: center;
-  margin: 10px 0 50px 0;   /* pushes it down */
+  margin: 10px 0 50px 0;
 }
 
-
+/* Button styling */
 .view-menu-btn {
   display: inline-block;
   background: #d62828;
@@ -201,30 +186,34 @@ border: 2px solid  crimson;
   transition: 0.3s ease;
 }
 
+/* Button hover state */
 .view-menu-btn:hover {
   background: #ffcc00;
   color: #d62828;
 }
 
-/* space under navbar */
+/* ================= ABOUT SECTION SPACING ================= */
+/* Adds spacing below navbar */
 .about-section {
   margin-top: 60px;
 }
 
-/* make the top image much smaller */
+/* ================= HOME CALL BANNER ================= */
+/* Banner section wrapper */
 .home-call-banner-section {
   margin: 50px auto;
   text-align: center;
 }
 
+/* Banner image styling */
 .home-call-banner-img {
-  width: 55%;        /* much smaller */
-  max-width: 650px;  /* hard limit */
+  width: 55%;
+  max-width: 650px;
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 18px;
-   border: 3px solid crimson;  
+  border: 3px solid crimson;
 }
 
 
@@ -567,7 +556,7 @@ border: 2px solid  crimson;
   .specials-heading {
     margin: 40px 0 30px 0;
   }
-no i cant find that im here 
+
   .specials {
     flex-direction: column;
     padding: 0 8% 0;
@@ -612,7 +601,12 @@ no i cant find that im here
     max-width: 100%;
   }
 
-  /* FOOTER MOBILE */
+
+
+  /* ================= FOOTER MOBILE ================= */
+/* Mobile adjustments for footer */
+@media (max-width: 767px) {
+
   .footer {
     padding: 20px 3%;
   }
@@ -637,28 +631,8 @@ no i cant find that im here
   .footer-copy {
     font-size: 12px;
   }
-}
 
-/* TABLET RESPONSIVENESS */
-@media (max-width: 992px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* SMALL MOBILE */
-@media (max-width: 600px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonial-card {
-    font-size: 16px;
-    padding: 30px 20px;
-  }
-}
-
-
+  /* ================= ABOUT MOBILE ================= */
   .about-container {
     margin: 30px auto;
     padding: 0 8%;
@@ -673,79 +647,7 @@ no i cant find that im here
     padding: 0 8%;
   }
 
-  /* ===== TESTIMONIALS SECTION ===== */
-/* ===== TESTIMONIALS SECTION ===== */
-.testimonials-section {
-  background: #ffffff;
-  padding: 80px 4%;
-  text-align: center;
-  margin: 80px 0;
-}
-
-.testimonials-heading {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #d62828;
-  margin-bottom: 60px;
-}
-
-/* PERFECT EVEN GRID */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* always 4 even columns */
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* CLEAN CARD DESIGN */
-.testimonial-card {
-  background: #ffffff;
-  padding: 35px 25px;
-  border-radius: 16px;
-  border: 2px solid crimson;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.6;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 180px; /* forces equal height */
-}
-
-/* subtle hover */
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(214, 40, 40, 0.2);
-}
-
-/* TABLET */
-@media (max-width: 992px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* Hover lift */
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(214, 40, 40, 0.25);
-}
-
-
-  /* MENU PAGE MOBILE */
+  /* ================= MENU MOBILE ================= */
   .menu-main-heading {
     margin: 30px 0 20px 0;
   }
@@ -783,25 +685,8 @@ no i cant find that im here
     margin: 30px 0;
     padding: 0 8%;
   }
-}
 
-
-
-  .about-banner-img {
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .about-container {
-    margin: 30px auto;
-    padding: 0 8%;
-  }
-
-  .about-inline-banner {
-    margin: 30px auto;
-    padding: 0 8%;
-  }
-
+  /* ================= TESTIMONIALS MOBILE ================= */
   .testimonials-section {
     padding: 30px 8%;
     margin: 30px 0;
@@ -810,6 +695,74 @@ no i cant find that im here
   .testimonials-heading {
     margin-bottom: 30px;
   }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    font-size: 16px;
+    padding: 30px 20px;
+  }
+}
+
+/* ================= TESTIMONIALS SECTION ================= */
+/* Main testimonials layout */
+.testimonials-section {
+  background: #ffffff;
+  padding: 80px 4%;
+  text-align: center;
+  margin: 80px 0;
+}
+
+/* Testimonials heading */
+.testimonials-heading {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d62828;
+  margin-bottom: 60px;
+}
+
+/* Even grid layout */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  border: 2px solid crimson;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+/* Testimonial hover effect */
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(214, 40, 40, 0.25);
+}
+
+/* ================= TESTIMONIALS TABLET ================= */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
   .testimonials-closing {
     margin: 30px auto 0;
@@ -905,7 +858,10 @@ no i cant find that im here
   background: #ffcc00;
   color: #d62828;
 }
+
+/* ================= MOBILE ADJUSTMENTS ================= */
 @media (max-width: 767px) {
+
   .contact-section {
     margin: 40px auto;
     padding: 0 8%;
@@ -914,31 +870,26 @@ no i cant find that im here
   .contact-heading {
     font-size: 2rem;
   }
-}
- @media (max-width: 767px) {
+
   .about-banner-static {
     height: auto;
   }
 
   .about-banner-img {
-
-
-    
     height: auto;
     object-fit: contain;
   }
-}
-
-
-@media (max-width: 767px) {
 
   .specials {
     flex-direction: column;
     align-items: center;
     padding: 40px 8% 60px;
   }
+}
 
-}.home-call-banner {
+/* ================= HOME CALL BANNER ================= */
+
+.home-call-banner {
   width: 100%;
   background: #ffffff;
   padding: 40px 4%;
@@ -969,29 +920,28 @@ no i cant find that im here
   .home-call-banner {
     flex-direction: column;
     text-align: center;
-    gap: 10px;          /* smaller space between them */
-    padding: 20px 4%;   /* reduce vertical padding */
+    gap: 10px;
+    padding: 20px 4%;
   }
 
   .home-call-left img {
-  height: 140px;
-  width: auto;
+    height: 140px;
+    width: auto;
+  }
+
+  .home-call-right img {
+    height: 180px;
+    width: auto;
+  }
 }
 
-.home-call-right img {
-  height: 180px;
-  width: auto;
-}
-}
-
-/* ===== DARK MODE BASE ===== */
+/* ================= DARK MODE ================= */
 
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
 
-/* Only darken content areas */
 body.dark-mode .about-container,
 body.dark-mode .contact-section,
 body.dark-mode .menu-card,
@@ -1000,7 +950,6 @@ body.dark-mode .testimonials-section {
   background-color: #1e1e1e;
 }
 
-/* Keep your branding EXACT */
 body.dark-mode .navbar,
 body.dark-mode .footer {
   background: #d62828;
@@ -1012,22 +961,17 @@ body.dark-mode .footer-copy {
   color: #ffffff;
 }
 
-
-/* ===== THEME TOGGLE CLEAN VERSION ===== */
-
+/* ================= THEME TOGGLE ================= */
 
 .theme-toggle {
   position: absolute;
   right: 80px;
   top: 18px;
-
   width: 50px;
   height: 24px;
-
-  background: #ffffff;          /* visible against red */
+  background: #ffffff;
   border-radius: 50px;
   border: 2px solid #ffffff;
-
   cursor: pointer;
   padding: 0;
 }
@@ -1035,14 +979,11 @@ body.dark-mode .footer-copy {
 .toggle-circle {
   width: 18px;
   height: 18px;
-
-  background: #d62828;          /* red knob */
+  background: #d62828;
   border-radius: 50%;
-
   position: absolute;
   top: 2px;
   left: 3px;
-
   transition: transform 0.3s ease;
 }
 
