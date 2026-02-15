@@ -923,16 +923,16 @@ no i cant find that im here
   .home-call-banner {
     flex-direction: column;
     text-align: center;
+    gap: 10px;          /* smaller space between them */
+    padding: 20px 4%;   /* reduce vertical padding */
   }
 
-  .home-call-right {
-    justify-content: center;
+  .home-call-left img {
+    max-height: 90px;
+  }
+
+  .home-call-right img {
+    max-height: 120px;
   }
 }
-
-
-
-
-
-
 
