@@ -206,25 +206,27 @@ border: 2px solid  crimson;
   color: #d62828;
 }
 
-/* ===== HOME CALL BANNER ===== */
+/* space under navbar */
+.about-section {
+  margin-top: 60px;
+}
+
+/* make the top image much smaller */
 .home-call-banner-section {
-  width: 100%;
-  margin: 0;
-  padding: 0 4%;
+  margin: 50px auto;
+  text-align: center;
 }
 
 .home-call-banner-img {
-  width: 85%;          /* makes it smaller */
-  max-width: 900px;    /* optional cap */
+  width: 55%;        /* much smaller */
+  max-width: 650px;  /* hard limit */
   height: auto;
   display: block;
-  margin: 0 auto;      /* keeps it centered */
-  border-radius: 12px;
+  margin: 0 auto;
+  border-radius: 18px;
+   border: 3px solid crimson;  
 }
 
-
-
-}
 
 /* ================= FOOTER ================= */
 .footer {
