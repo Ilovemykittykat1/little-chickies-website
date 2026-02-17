@@ -99,7 +99,6 @@ body {
 }
 
 /* ================= SPECIALS SECTION ================= */
-/* Main specials heading */
 .specials-heading {
   text-align: center;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -108,9 +107,8 @@ body {
   text-transform: uppercase;
   color: #d62828;
   text-shadow: 2px 2px 0 #000;
-  margin: 80px 0 50px 0;
+  margin: 30px 0 20px 0; /* tightened */
 }
-
 /* Secondary heading used in bottom sections */
 .bottom-section-heading {
   text-align: center;
@@ -129,9 +127,10 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  padding: 80px 4% 100px;
+  padding: 40px 4% 20px;
   width: 100%;
 }
+
 
 /* Individual special card */
 .special-item {
@@ -165,11 +164,11 @@ body {
 }
 
 /* ================= VIEW MENU BUTTON ================= */
-/* Wrapper for centering button */
 .view-menu-wrapper {
   text-align: center;
-  margin: 10px 0 50px 0;
+  margin: 20px 0 40px 0;
 }
+
 
 /* Button styling */
 .view-menu-btn {
@@ -557,11 +556,15 @@ body {
     margin: 40px 0 30px 0;
   }
 
-  .specials {
-    flex-direction: column;
-    padding: 0 8% 0;
-    margin-bottom: 30px;
-  }
+.specials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 60px 4% 30px;
+  width: 100%;
+}
+
 
   .special-item {
     width: 100%;
@@ -1020,14 +1023,14 @@ body.dark-mode .testimonials-closing p {
     padding: 15px 0;
   }
 }
-/* Make toggle visible inside red mobile nav */
+
 .mobile-toggle .theme-toggle {
-  background: #ffffff;        /* white track */
-  border: 2px solid #ffffff;  /* white outline */
+  background: #ffffff;        
+  border: 2px solid #ffffff;  
 }
 
 .mobile-toggle .toggle-circle {
-  background: #d62828;        /* red circle */
+  background: #d62828;        
 }
 /* ================= TESTIMONIALS MOBILE ONLY ================= */
 @media (max-width: 767px) {
