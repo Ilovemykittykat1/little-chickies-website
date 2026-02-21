@@ -1050,3 +1050,71 @@ body.dark-mode .testimonials-closing p {
   }
 
 }
+  .theme-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      width: 64px;
+      height: 32px;
+      background: #c0392b;
+      border: 2px solid #922b21;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: 0;
+      outline: none;
+      transition: background 0.35s ease;
+    }
+
+    /* ☀️ shown on right in light mode, hidden in dark mode */
+    .theme-toggle::after {
+      content: '☀️';
+      position: absolute;
+      right: 7px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+
+    /* hide ☀️ track icon when dark mode is active */
+    body.dark-mode .theme-toggle::after {
+      opacity: 0;
+    }
+
+    .toggle-circle {
+      position: absolute;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    /* 🌙 in circle in light mode */
+    .toggle-circle::after {
+      content: '🌙';
+    }
+
+    /* circle slides right + shows ☀️ in dark mode */
+    body.dark-mode .toggle-circle {
+      transform: translateX(32px);
+    }
+    body.dark-mode .toggle-circle::after {
+      content: '☀️';
+    }
+
+    /* 🌙 hint on left side in dark mode */
+    body.dark-mode .theme-toggle::before {
+      content: '🌙';
+      position: absolute;
+      left: 7px;
+      font-size: 12px;
+      pointer-events: none;
+    }
