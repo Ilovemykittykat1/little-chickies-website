@@ -194,18 +194,11 @@ body {
   color: #d62828;
 }
 
-.promo-banner img {
-  width: 70%;   /* try 60% or 65% if still too big */
-  height: auto;
-  display: block;
-  margin: 0 auto;   /* keeps it centered */
-  border-radius: 20px;
-}
-/* ================= HOME CALL BANNER ================= */
 .home-call-banner-section {
   width: 100%;
-  max-width: 750px;   /* smaller banner */
-  margin: 20px auto;
+  max-width: 1100px;
+  margin: 20px auto 30px auto;
+  padding: 0 3%;
 }
 
 .home-call-banner-img {
@@ -214,7 +207,11 @@ body {
   display: block;
   border-radius: 20px;
 }
-
+@media (max-width: 768px) {
+  .home-call-banner-section {
+    margin-top: 20px;   /* adjust to 25px or 30px if needed */
+  }
+}
 /* ================= FOOTER ================= */
 .footer {
   background: #d62828;
