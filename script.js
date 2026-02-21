@@ -37,11 +37,21 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 // ================= DARK MODE TOGGLE =================
 
+const banner = document.getElementById("call-banner");
+
 // Apply saved theme on page load
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
   document.body.classList.add("dark-mode");
+
+  if (banner) {
+    banner.src = "images/homebanner.jpg"; // dark image
+  }
+} else {
+  if (banner) {
+    banner.src = "images/homebanner2.jpg"; // light image
+  }
 }
 
 // Toggle button logic
@@ -53,8 +63,17 @@ if (themeToggle) {
 
     if (document.body.classList.contains("dark-mode")) {
       localStorage.setItem("theme", "dark");
+
+      if (banner) {
+        banner.src = "images/homebanner.jpg"; // dark image
+      }
+
     } else {
       localStorage.setItem("theme", "light");
+
+      if (banner) {
+        banner.src = "images/homebanner2.jpg"; // light image
+      }
     }
   });
 }
