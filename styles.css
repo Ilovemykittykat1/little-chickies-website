@@ -194,25 +194,25 @@ body {
   color: #d62828;
 }
 
-/* ================= ABOUT SECTION SPACING ================= */
-.about-section {
-  margin-top: 60px;
+.promo-banner img {
+  width: 70%;   /* try 60% or 65% if still too big */
+  height: auto;
+  display: block;
+  margin: 0 auto;   /* keeps it centered */
+  border-radius: 20px;
 }
-
 /* ================= HOME CALL BANNER ================= */
 .home-call-banner-section {
-  margin: 50px auto;
-  text-align: center;
+  width: 100%;
+  max-width: 750px;   /* smaller banner */
+  margin: 20px auto;
 }
 
 .home-call-banner-img {
-  width: 88%;
-  max-width: 1100px;
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
-  border-radius: 18px;
-  border: 3px solid crimson;
+  border-radius: 20px;
 }
 
 /* ================= FOOTER ================= */
