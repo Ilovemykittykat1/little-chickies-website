@@ -37,9 +37,14 @@
 </ul>
   </nav>
 
-  <!-- MENU HEADING -->
-  <h2 class="menu-main-heading">OUR DELICIOUS MENU</h2>
-
+ <div class="menu-search-wrapper">
+  <form id="menuSearchForm" class="menu-search-form">
+    <input type="text" id="menuSearch" placeholder="Search the menu..." />
+    <button type="submit" class="menu-search-btn">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+</div>
   <!-- CATEGORY TABS -->
  <div class="menu-tabs">
   <button class="menu-tab active" onclick="showCategory('all')">

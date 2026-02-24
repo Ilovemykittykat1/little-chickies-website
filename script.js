@@ -77,3 +77,52 @@ if (themeToggle) {
     }
   });
 }
+
+// ================= MENU SEARCH =================
+const menuSearch = document.getElementById("menuSearch");
+
+if (menuSearch) {
+  menuSearch.addEventListener("keyup", function () {
+    const value = menuSearch.value.toLowerCase();
+    const cards = document.querySelectorAll(".menu-card");
+    const categories = document.querySelectorAll(".menu-category");
+    const tabs = document.querySelectorAll(".menu-tab");
+
+    if (value !== "") {
+
+      // Remove active tab highlight
+      tabs.forEach(tab => tab.classList.remove("active"));
+
+      // Show all categories
+      categories.forEach(cat => cat.style.display = "block");
+
+      // Filter cards globally
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(value)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+    } else {
+
+      // Reset everything when search is cleared
+      categories.forEach(cat => cat.style.display = "none");
+
+      const allSection = document.getElementById("all");
+      if (allSection) {
+        allSection.style.display = "block";
+      }
+
+      tabs.forEach(tab => tab.classList.remove("active"));
+      const allTab = document.querySelector(".menu-tab[onclick=\"showCategory('all')\"]");
+      if (allTab) {
+        allTab.classList.add("active");
+      }
+
+      cards.forEach(card => card.style.display = "");
+    }
+  });
+}
