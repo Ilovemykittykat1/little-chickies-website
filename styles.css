@@ -18,23 +18,17 @@ body {
 /* ================= NAV BAR ================= */
 /* Main navigation container */
 .navbar {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 12px 30px;
+  padding: 18px 30px;
   background: #d62828;
   width: 100%;
-  z-index: 1000;
 }
-
 /* Left side of navbar holding logo */
 .nav-left {
-  display: flex;
-  align-items: center;
+  justify-self: start;
 }
-
-/* Logo size */
 .logo {
   height: 60px;
 }
@@ -47,15 +41,18 @@ body {
   color: white;
   cursor: pointer;
 }
-
+.hamburger {
+  position: absolute;
+  right: 30px;
+}
 /* ================= DESKTOP NAV LINKS ================= */
 /* Horizontal navigation list */
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 25px;
 }
-
 /* Navigation link styling */
 .nav-links a {
   color: #fff;
@@ -1165,13 +1162,6 @@ body.dark-mode .testimonials-closing {
 
 
 
-
-
-
-
-
-
-
 .logo-link {
   display: flex;
   align-items: center;
@@ -1182,4 +1172,8 @@ body.dark-mode .testimonials-closing {
   height: 70px;
   width: auto;
   cursor: pointer;
+}
+.theme-item {
+  position: absolute;
+  right: 30px;
 }
