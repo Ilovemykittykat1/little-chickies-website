@@ -1101,3 +1101,13 @@ body.dark-mode .testimonials-closing {
     padding: 12px 16px;
   }
 }
+.home-call-banner-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .home-call-banner-section a {
+    pointer-events: none;
+  }
+}
