@@ -1,6 +1,8 @@
+body.preload * {
+  transition: none !important;
+}
 /* ==========================================================================
    GLOBAL RESET
-   Removes default browser margins/padding, sets box-sizing and base font
    ========================================================================== */
 * {
   margin: 0;
@@ -9,11 +11,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* ==========================================================================
-   BODY
-   Base background, text color, and prevent horizontal scroll
-   ========================================================================== */
 body {
   background: #ffffff;
   color: #000;
@@ -23,30 +20,28 @@ body {
 
 /* ==========================================================================
    NAVBAR — DESKTOP
-   Three-zone layout: logo left | links center | theme toggle right
-   Height is driven by padding + logo height (70px logo + 20px top/bottom = ~110px)
+   True 3-column flex: [logo left] [links center] [toggle right]
    ========================================================================== */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;   /* pushes left / center / right into position */
+  justify-content: space-between;
   padding: 20px 30px;
   background: #d62828;
   width: 100%;
-  min-height: 90px;                 /* ensures enough room for 70px logo */
+  min-height: 90px;
   position: relative;
   z-index: 1000;
 }
 
-/* ── Left zone: logo — takes up left portion so toggle mirrors it on the right ── */
 .nav-left {
   display: flex;
   align-items: center;
-  flex: 1;
+  width: 160px;
+  flex-shrink: 0;
   justify-content: flex-start;
 }
 
-/* Logo image */
 .logo {
   height: 70px;
   width: auto;
@@ -54,24 +49,24 @@ body {
   display: block;
 }
 
-/* Logo as a link (no underline) */
 .logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-/* ── Center zone: navigation links ── */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
-  position: absolute;               /* pulled out of flow so it truly centers */
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  transform: none;
+  min-width: 0;
 }
 
-/* Individual nav link */
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -81,21 +76,21 @@ body {
   letter-spacing: 1px;
 }
 
-/* Hover underline effect */
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* ── Right zone: theme toggle — OPPOSITE side from the logo, hugs the edge ── */
+/* Right zone — min-width locks it so it never collapses and shifts the toggle */
 .theme-item {
+  width: 160px;
+  flex-shrink: 0;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  flex: 1;                          /* mirrors .nav-left so links stay centred */
-  justify-content: flex-end;        /* pushes toggle to the far right */
-  margin-right: -15px;              /* cancels navbar padding so it sits at the true edge */
+  position: static;
+  transform: none;
 }
 
-/* ── Hamburger icon — hidden on desktop ── */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -106,7 +101,6 @@ body {
 
 /* ==========================================================================
    THEME TOGGLE BUTTON
-   Pill-shaped toggle that slides between light (☀️) and dark (🌙) mode
    ========================================================================== */
 .theme-toggle {
   position: relative;
@@ -121,9 +115,10 @@ body {
   padding: 0;
   outline: none;
   transition: background 0.35s ease;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
-/* ☀️ icon shown on the right side in light mode */
 .theme-toggle::after {
   content: '☀️';
   position: absolute;
@@ -134,12 +129,10 @@ body {
   transition: opacity 0.2s ease;
 }
 
-/* Hide ☀️ when dark mode is active */
 body.dark-mode .theme-toggle::after {
   opacity: 0;
 }
 
-/* 🌙 icon shown on the left side in dark mode */
 body.dark-mode .theme-toggle::before {
   content: '🌙';
   position: absolute;
@@ -148,7 +141,7 @@ body.dark-mode .theme-toggle::before {
   pointer-events: none;
 }
 
-/* Sliding circle inside the toggle */
+/* Use LEFT instead of transform so page-level transforms can't interfere */
 .toggle-circle {
   position: absolute;
   left: 3px;
@@ -157,7 +150,7 @@ body.dark-mode .theme-toggle::before {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,21 +158,19 @@ body.dark-mode .theme-toggle::before {
   line-height: 1;
 }
 
-/* 🌙 inside circle in light mode */
 .toggle-circle::after {
   content: '🌙';
 }
 
-/* Circle slides right + shows ☀️ in dark mode */
 body.dark-mode .toggle-circle {
-  transform: translateX(32px);
+  left: 37px;
+  transform: none;
 }
 
 body.dark-mode .toggle-circle::after {
   content: '☀️';
 }
 
-/* Mobile-only toggle block — hidden on desktop */
 .mobile-toggle {
   display: none;
 }
@@ -187,7 +178,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    HERO SECTION
-   Full-width slideshow with fade transitions
    ========================================================================== */
 .hero {
   width: 100%;
@@ -200,7 +190,6 @@ body.dark-mode .toggle-circle::after {
   border-radius: 18px;
 }
 
-/* All hero images stacked, invisible by default */
 .hero-image {
   position: absolute;
   inset: 0;
@@ -211,7 +200,6 @@ body.dark-mode .toggle-circle::after {
   transition: opacity 0.8s ease-in-out;
 }
 
-/* Active slide is fully visible */
 .hero-image.active {
   opacity: 1;
 }
@@ -220,8 +208,6 @@ body.dark-mode .toggle-circle::after {
 /* ==========================================================================
    SPECIALS SECTION
    ========================================================================== */
-
-/* Section heading */
 .specials-heading {
   text-align: center;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -233,7 +219,6 @@ body.dark-mode .toggle-circle::after {
   margin: 30px 0 20px 0;
 }
 
-/* Reusable large heading used in bottom page sections */
 .bottom-section-heading {
   text-align: center;
   font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -245,7 +230,6 @@ body.dark-mode .toggle-circle::after {
   margin: 70px 0 35px 0;
 }
 
-/* Specials horizontal layout */
 .specials {
   display: flex;
   justify-content: center;
@@ -255,7 +239,6 @@ body.dark-mode .toggle-circle::after {
   width: 100%;
 }
 
-/* Individual special card */
 .special-item {
   flex: 0 0 auto;
   width: 100%;
@@ -267,7 +250,6 @@ body.dark-mode .toggle-circle::after {
   background: transparent;
 }
 
-/* Special card image */
 .special-item img {
   width: 100%;
   height: auto;
@@ -277,7 +259,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    PROMO BANNER
-   Full-width promotional image block
    ========================================================================== */
 .promo-banner {
   max-width: 1200px;
@@ -297,7 +278,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    VIEW MENU BUTTON
-   Centered CTA button linking to the menu page
    ========================================================================== */
 .view-menu-wrapper {
   text-align: center;
@@ -326,7 +306,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    HOME CALL BANNER
-   Full-width clickable banner image (link active on mobile only)
    ========================================================================== */
 .home-call-banner-section {
   width: 100%;
@@ -343,7 +322,6 @@ body.dark-mode .toggle-circle::after {
   cursor: pointer;
 }
 
-/* Disable click on desktop — banner link is mobile-only */
 @media (min-width: 768px) {
   .home-call-banner-section a {
     pointer-events: none;
@@ -353,7 +331,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    CALL NOW BUTTON
-   Prominent phone CTA button
    ========================================================================== */
 .call-now-wrapper {
   width: 100%;
@@ -388,7 +365,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    FOOTER
-   Red footer with centred links and copyright line
    ========================================================================== */
 .footer {
   background: #d62828;
@@ -437,10 +413,7 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    ABOUT PAGE
-   Banner, text container, and inline image sections
    ========================================================================== */
-
-/* Full-height banner on tablet+ */
 @media (min-width: 768px) {
   .about-banner-static,
   .contact-banner {
@@ -457,7 +430,6 @@ body.dark-mode .toggle-circle::after {
   display: block;
 }
 
-/* Main text block */
 .about-container {
   max-width: 900px;
   margin: 50px auto;
@@ -472,7 +444,6 @@ body.dark-mode .toggle-circle::after {
   color: #000;
 }
 
-/* Full-width inline image inside About */
 .about-inline-banner {
   width: 100%;
   max-width: 1200px;
@@ -483,7 +454,6 @@ body.dark-mode .toggle-circle::after {
   border-radius: 12px;
 }
 
-/* Top banner on About page */
 .about-top-banner {
   width: 100%;
   max-width: 1100px;
@@ -501,10 +471,7 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    MENU PAGE
-   Heading, category tabs, card grid, search bar, and call banner
    ========================================================================== */
-
-/* Page heading */
 .menu-main-heading {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -516,7 +483,6 @@ body.dark-mode .toggle-circle::after {
   margin: 50px 0 30px 0;
 }
 
-/* ── Category tab bar ── */
 .menu-tabs {
   display: flex;
   justify-content: center;
@@ -527,7 +493,6 @@ body.dark-mode .toggle-circle::after {
   max-width: 1400px;
 }
 
-/* Individual tab */
 .menu-tab:hover {
   border-color: #d62828;
   color: #d62828;
@@ -544,14 +509,12 @@ body.dark-mode .toggle-circle::after {
   font-size: 18px;
 }
 
-/* ── Category section wrapper ── */
 .menu-category {
   max-width: 1400px;
   margin: 0 auto 50px;
   padding: 0 4%;
 }
 
-/* Category title */
 .menu-section-title {
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 900;
@@ -562,7 +525,6 @@ body.dark-mode .toggle-circle::after {
   text-align: center;
 }
 
-/* ── Menu card grid ── */
 .menu-grid-cards {
   display: flex;
   flex-wrap: wrap;
@@ -570,7 +532,6 @@ body.dark-mode .toggle-circle::after {
   gap: 25px;
 }
 
-/* Individual menu card */
 .menu-card {
   background: #fff;
   border-radius: 16px;
@@ -583,19 +544,16 @@ body.dark-mode .toggle-circle::after {
   max-width: 350px;
 }
 
-/* Drinks section card width override */
 #drinks .menu-card {
   flex: 0 0 320px;
   width: 320px;
 }
 
-/* Card hover lift */
 .menu-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(214, 40, 40, 0.2);
 }
 
-/* Card image container */
 .menu-card-image {
   width: 100%;
   height: 200px;
@@ -614,7 +572,6 @@ body.dark-mode .toggle-circle::after {
   transform: scale(1.05);
 }
 
-/* Card text content */
 .menu-card-content {
   padding: 20px;
 }
@@ -640,7 +597,6 @@ body.dark-mode .toggle-circle::after {
   color: #000;
 }
 
-/* In-menu call-to-action banner */
 .menu-call-banner {
   width: 100%;
   margin: 50px 0;
@@ -654,7 +610,6 @@ body.dark-mode .toggle-circle::after {
   display: block;
 }
 
-/* ── Menu search bar ── */
 .menu-search-wrapper {
   width: 100%;
   display: flex;
@@ -699,7 +654,6 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    TESTIMONIALS SECTION
-   4-column review grid with hover effect
    ========================================================================== */
 .testimonials-section {
   background: #ffffff;
@@ -717,7 +671,6 @@ body.dark-mode .toggle-circle::after {
   margin-bottom: 60px;
 }
 
-/* 4-column grid on desktop */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -726,7 +679,6 @@ body.dark-mode .toggle-circle::after {
   margin: 0 auto;
 }
 
-/* Individual testimonial card */
 .testimonial-card {
   background: #ffffff;
   padding: 35px 25px;
@@ -748,7 +700,6 @@ body.dark-mode .toggle-circle::after {
   box-shadow: 0 18px 45px rgba(214, 40, 40, 0.25);
 }
 
-/* Closing paragraph below the grid */
 .testimonials-closing {
   max-width: 900px;
   margin: 50px auto 0;
@@ -766,10 +717,7 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    CONTACT PAGE
-   Banner, form, and submit button
    ========================================================================== */
-
-/* Full-height contact banner */
 .contact-banner {
   width: 100%;
   margin: 0;
@@ -783,7 +731,6 @@ body.dark-mode .toggle-circle::after {
   display: block;
 }
 
-/* Contact form container */
 .contact-section {
   max-width: 700px;
   margin: 80px auto 60px auto;
@@ -806,7 +753,6 @@ body.dark-mode .toggle-circle::after {
   gap: 20px;
 }
 
-/* Input and textarea fields */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -824,7 +770,6 @@ body.dark-mode .toggle-circle::after {
   box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
 }
 
-/* Submit button */
 .contact-btn {
   background: #d62828;
   color: #fff;
@@ -845,14 +790,12 @@ body.dark-mode .toggle-circle::after {
 
 /* ==========================================================================
    DARK MODE
-   Overrides for backgrounds and text when .dark-mode is on <body>
    ========================================================================== */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
 
-/* Dark card / section backgrounds */
 body.dark-mode .about-container,
 body.dark-mode .contact-section,
 body.dark-mode .menu-card,
@@ -861,20 +804,49 @@ body.dark-mode .testimonials-section {
   background-color: #1e1e1e;
 }
 
-/* Navbar and footer stay red in dark mode */
 body.dark-mode .navbar,
 body.dark-mode .footer {
   background: #d62828;
 }
 
-/* Keep nav/footer links white */
+/* Explicitly lock navbar flex in dark mode — prevents any shift */
+body.dark-mode .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body.dark-mode .nav-left {
+  width: 160px;
+  flex-shrink: 0;
+  justify-content: flex-start;
+}
+
+body.dark-mode .nav-links {
+  flex: 1;
+  justify-content: center;
+  position: static;
+  transform: none;
+}
+
+body.dark-mode .theme-item {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: static;
+  transform: none;
+  right: auto;
+  top: auto;
+}
+
 body.dark-mode .nav-links a,
 body.dark-mode .footer-links a,
 body.dark-mode .footer-copy {
   color: #ffffff;
 }
 
-/* Body text override for dark mode */
 body.dark-mode .about-container p,
 body.dark-mode .contact-section p,
 body.dark-mode .menu-card-desc,
@@ -883,7 +855,6 @@ body.dark-mode .testimonials-closing p {
   color: #ffffff;
 }
 
-/* Transparent backgrounds for sections that sit on the dark body */
 body.dark-mode .testimonials-section,
 body.dark-mode .about-container,
 body.dark-mode .contact-section,
@@ -898,14 +869,11 @@ body.dark-mode .testimonials-closing {
    RESPONSIVE — TABLET  (max-width: 992px)
    ========================================================================== */
 @media (max-width: 992px) {
-
-  /* About top banner */
   .about-top-banner {
     max-width: 900px;
     margin: 25px auto 40px auto;
   }
 
-  /* Testimonials drop to 2 columns */
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -917,16 +885,16 @@ body.dark-mode .testimonials-closing {
    ========================================================================== */
 @media (max-width: 767px) {
 
-  /* ── Navbar ── */
   .navbar {
     justify-content: center;
     padding: 15px;
     min-height: 80px;
+    flex-wrap: nowrap;
   }
 
-  /* Logo centred on mobile */
   .nav-left {
-    width: 100%;
+    width: auto;
+    flex-shrink: 0;
     justify-content: center;
   }
 
@@ -934,16 +902,15 @@ body.dark-mode .testimonials-closing {
     height: 65px;
   }
 
-  /* Hamburger replaces links on mobile */
   .hamburger {
     display: block;
     position: absolute;
-    left: 20px;
+    right: 20px;
+    left: auto;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  /* Desktop theme toggle hidden; mobile toggle shown instead */
   .theme-item {
     display: none;
   }
@@ -955,7 +922,6 @@ body.dark-mode .testimonials-closing {
     padding: 15px 0;
   }
 
-  /* Dropdown nav links (collapsed by default) */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -966,7 +932,9 @@ body.dark-mode .testimonials-closing {
     left: 0;
     padding: 15px 0;
     z-index: 2000;
-    transform: none;              /* override the desktop translateX(-50%) */
+    flex: unset;
+    justify-content: unset;
+    transform: none;
   }
 
   .nav-links.active {
@@ -978,7 +946,6 @@ body.dark-mode .testimonials-closing {
     padding: 12px 0;
   }
 
-  /* ── Specials ── */
   .specials-heading {
     margin: 40px 0 30px 0;
   }
@@ -995,18 +962,15 @@ body.dark-mode .testimonials-closing {
     margin: 0 auto;
   }
 
-  /* ── Promo banner ── */
   .promo-banner {
     margin: 0 0 30px 0;
     padding: 0 4%;
   }
 
-  /* ── View menu button ── */
   .view-menu-wrapper {
     margin: 0 0 30px 0;
   }
 
-  /* ── Home call banner ── */
   .home-call-banner-section {
     height: auto;
     margin: 0 0 30px 0;
@@ -1018,7 +982,6 @@ body.dark-mode .testimonials-closing {
     object-fit: contain;
   }
 
-  /* ── Call now button ── */
   .call-now-wrapper {
     margin: 25px 0;
   }
@@ -1029,7 +992,6 @@ body.dark-mode .testimonials-closing {
     border-radius: 10px;
   }
 
-  /* ── Footer ── */
   .footer {
     padding: 20px 3%;
   }
@@ -1054,7 +1016,6 @@ body.dark-mode .testimonials-closing {
     font-size: 12px;
   }
 
-  /* ── About page ── */
   .about-container {
     margin: 30px auto;
     padding: 0 8%;
@@ -1088,7 +1049,6 @@ body.dark-mode .testimonials-closing {
     border-radius: 14px;
   }
 
-  /* ── Menu page ── */
   .menu-main-heading {
     margin: 30px 0 20px 0;
   }
@@ -1113,7 +1073,6 @@ body.dark-mode .testimonials-closing {
     padding: 0 8%;
   }
 
-  /* Two-column card grid on mobile */
   .menu-grid-cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -1128,7 +1087,6 @@ body.dark-mode .testimonials-closing {
     padding: 0 8%;
   }
 
-  /* Menu search bar */
   .menu-search-form {
     max-width: 100%;
   }
@@ -1142,7 +1100,6 @@ body.dark-mode .testimonials-closing {
     padding: 12px 16px;
   }
 
-  /* ── Contact page ── */
   .contact-section {
     margin: 40px auto;
     padding: 0 8%;
@@ -1152,7 +1109,6 @@ body.dark-mode .testimonials-closing {
     font-size: 2rem;
   }
 
-  /* ── Testimonials ── */
   .testimonials-section {
     padding: 40px 6%;
     margin: 40px 0;
@@ -1162,7 +1118,6 @@ body.dark-mode .testimonials-closing {
     margin-bottom: 30px;
   }
 
-  /* Single column on mobile */
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
