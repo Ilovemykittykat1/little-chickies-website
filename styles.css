@@ -51,16 +51,19 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 /* Navigation link styling */
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 22px;
+  display: block;
 }
-
 /* Hover underline effect */
 .nav-links a:hover {
   text-decoration: underline;
