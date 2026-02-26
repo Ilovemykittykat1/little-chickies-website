@@ -1148,12 +1148,17 @@ body.dark-mode .testimonials-closing {
   color: #d62828;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
+
+  .call-now-wrapper {
+    margin: 25px 0;
+  }
+
   .call-now-btn {
-    width: 100%;
-    max-width: 420px;
-    font-size: 20px;
-    padding: 20px;
+    width: auto;
+    max-width: none;
+    font-size: 18px;
+    padding: 14px 26px;
+    border-radius: 10px;
   }
 }
