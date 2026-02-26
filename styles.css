@@ -1111,3 +1111,23 @@ body.dark-mode .testimonials-closing {
     pointer-events: none;
   }
 }
+
+.test-call-wrapper {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.test-call-btn {
+  background-color: #e21b1b;
+  color: white;
+  padding: 16px 28px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.test-call-btn:hover {
+  opacity: 0.85;
+}
