@@ -38,11 +38,12 @@ body {
   z-index: 1000;
 }
 
-/* ── Left zone: logo ── */
+/* ── Left zone: logo — takes up left portion so toggle mirrors it on the right ── */
 .nav-left {
   display: flex;
   align-items: center;
-  flex: 0 0 auto;                   /* don't grow/shrink */
+  flex: 1;
+  justify-content: flex-start;
 }
 
 /* Logo image */
@@ -74,9 +75,10 @@ body {
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 19px;
   white-space: nowrap;
+  letter-spacing: 1px;
 }
 
 /* Hover underline effect */
@@ -84,12 +86,13 @@ body {
   text-decoration: underline;
 }
 
-/* ── Right zone: theme toggle (desktop) ── */
+/* ── Right zone: theme toggle — OPPOSITE side from the logo, hugs the edge ── */
 .theme-item {
   display: flex;
   align-items: center;
-  flex: 0 0 auto;                   /* don't grow/shrink */
-  margin-left: auto;                /* push to far right inside flex row */
+  flex: 1;                          /* mirrors .nav-left so links stay centred */
+  justify-content: flex-end;        /* pushes toggle to the far right */
+  margin-right: -15px;              /* cancels navbar padding so it sits at the true edge */
 }
 
 /* ── Hamburger icon — hidden on desktop ── */
