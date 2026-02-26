@@ -911,8 +911,23 @@ body.dark-mode .testimonials-closing {
     transform: translateY(-50%);
   }
 
+  /* Hide desktop theme-item (the one outside nav-links) */
   .theme-item {
     display: none;
+  }
+
+  /* But SHOW theme-item when it's inside the mobile dropdown nav-links */
+  .nav-links .theme-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  /* Also show it when the menu is open */
+  .nav-links.active .theme-item {
+    display: flex;
   }
 
   .mobile-toggle {
@@ -944,6 +959,29 @@ body.dark-mode .testimonials-closing {
   .nav-links li {
     text-align: center;
     padding: 12px 0;
+  }
+
+  /* Override dark-mode desktop nav-links rules so mobile still works */
+  body.dark-mode .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex: unset;
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  body.dark-mode .nav-links .theme-item,
+  body.dark-mode .nav-links.active .theme-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  body.dark-mode .theme-item {
+    display: none;
   }
 
   .specials-heading {
