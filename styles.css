@@ -1170,3 +1170,18 @@ body.dark-mode .testimonials-closing {
     padding: 0 8%;
   }
 }
+
+
+
+
+.center-title {
+  text-align: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.menu-price-group {
+  margin-top: 8px;
+}
